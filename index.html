@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABS-Abhishek Singh | Data Scientist | Liverpool | United Kingdom</title>
+    <meta name="description" content="Portfolio website of ABS">
+    <meta name="keywords" content="Data, Data Scientist, Web Developer">
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="active">
+
+                    <!-- Logo Below -->
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg  class ="mCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: left;  display: block; shape-rendering: auto;" width="100px" height="100px" >
+                                <g transform="translate(50 50)">
+                                <g transform="scale(0.5)">
+                                <g transform="translate(-50 -50)">
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="0.7575757575757576s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#F5F5F5" d="M50 50L50 0A50 50 0 0 1 100 50Z"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.0101010101010102s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#01395C" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(90 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.5151515151515151s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#007eb6" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(180 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="3.0303030303030303s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#0067A1" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(270 50 50)"></path>
+                                </g>
+                                </g>
+                                </g>
+                                </g>
+                                <svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg">
+                                    <style>
+
+                                    .heavy { font: normal 40px cinzel ;fill: rgb(247, 246, 245) }
+
+                                    </style>
+
+                                    <text x="140" y="200" class="heavy">A-b-s</text>
+
+                                </svg>
+                        </svg>
+                <!-- Logo Above -->
+
+                    <ul class="list-unstyled components mb-5" >
+<!--                        style="color:lightgrey ;"-->
+                      <br>
+                      <li class="active" title="Skills" data-bs-toggle="tooltip" data-bs-placement="right">
+                        <a href="skills.html" style="text-decoration: none; "aria-label="Skills" ><span class="fa-solid fa-keyboard" aria-hidden="true"></span>Skills</a>
+                      </li>             <!-- style="color:#ED8758;" -->
+                      <li>
+                          <a href="experience.html" style="text-decoration: none;" aria-label="Experience"><span class="fa-solid fa-person-digging"></span>Experience</a>
+                      </li>
+                      <!-- <i class="fa-solid fa-person-digging"></i> -->
+                      <li>
+                        <a href="education.html" style="text-decoration: none;" aria-label="Education" ><span class="fa-brands fa-odnoklassniki"></span>Education</a>
+                      </li>
+                      <li>
+                        <a href="certificates.html" style="text-decoration: none;" aria-label="Certificates"><span class="fa-solid fa-ribbon" ></span>Certificates</a>
+                      </li>
+
+                      <li>
+
+                        <a href="gallery.html" style="text-decoration: none;" aria-label="Gallery"><span class="fa-solid fa-clover"></span>Gallery</a>
+                      </li>
+
+                      <li>
+                          <a href="resume.html" style="text-decoration: none;" aria-label="Resume"><span class="fa-solid fa-address-card"><sup><i class="fa-solid fa-circle-down fa-2xs" style="color:limegreen;"></i></sup></span>CV</a>
+                      </li>
+
+                      <!-- <i class="fa-solid fa-arrows-spin"></i> -->
+<!--  -->
+                      <!-- <i class="fa-solid fa-universal-access"></i> -->
+
+                    </ul>
+
+                    <div class="footer">
+                        <p>
+                                  Copyright &copy;&nbsp;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                                </p>
+                    </div>
+    	</nav>
+
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid ">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <l class="d-inline-block text-align px-2"style="font-size: 1.5em; font-family: Poppins, Arial, sans-serif;
+            color: #000;">Abhishek Singh</l>
+            <button type="button" class="btn btn-dark d-inline-block d-lg-none ml-auto"   data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" ></i>
+                <span class="sr-only">Toggle Menu</span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://github.com/AbsTheAnalyst"><i class="fa-brands fa-github fa-xl "></i>&nbsp;github</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"><i class="fa-brands fa-linkedin fa-xl"></i>&nbsp;linkedin</a>
+                </li>
+                  <li class="nav-item active">
+                    <a class="nav-link ">
+                      <i class="fa-solid fa-eye fa-xl"  class="badge bg-secondary position-relative">&nbsp;</i>Profile Views&nbsp;&nbsp;
+                      <span class="position-relative top-50 start-300 translate-middle badge rounded-pill bg-danger">
+                        <script>
+                          sessionStorage.setItem("init", 2290)
+                          sessionStorage.setItem("IprofView",sessionStorage.getItem("IprofView")?sessionStorage.getItem("IprofView") : (parseInt(sessionStorage.getItem("init")) + Math.floor(Math.random()*10)));
+                          document.write(sessionStorage.getItem("IprofView"));
+                          const count =sessionStorage.getItem("IprofView");
+                          </script>
+
+                      </span>
+                    </a>
+
+    <!--                    https://www.youtube.com/watch?v=XkLyX2CT1Ro-->
+
+                  </li>
+<!--                  <button type="button" class="btn btn-primary position-relative">-->
+<!--                  Profile-->
+<!--                  <span class="position-absolute top-50 start-100 translate-middle p-1  border border-5 border-light rounded-pill">-->
+<!--                    <span class="visually-hidden">&nbsp;{{1}}&nbsp;</span>-->
+<!--                  </span>-->
+<!--                </button>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="">Log Out</a>-->
+<!--                </li>-->
+
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+<!--content here-->
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<style>
+        .myaccordion {
+
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.myaccordion .card,
+.myaccordion .card:last-child .card-header {
+  border: none;
+}
+
+.myaccordion .card-header {
+  border-bottom-color: #a3a4a6;
+  background: #e4e6e8;
+}
+
+.myaccordion .fa-stack {
+  font-size: 18px;
+}
+
+.myaccordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #012a3e;
+  padding: 0;
+}
+
+.myaccordion .btn-link:hover,
+.myaccordion .btn-link:focus {
+  text-decoration: none;
+}
+
+.myaccordion li + li {
+  margin-top: 10px;
+}
+.myaccordion{
+
+  [data-toggle="collapse"] i:before {
+    font-family: 'FontAwesome';
+    content: "\f056";
+
+    color: #012a3e;
+
+}
+
+[data-toggle="collapse"].collapsed i:before {
+    font-family: 'FontAwesome';
+    content: "\f055";
+    color: #012a3e;
+}
+}
+</style>
+
+<style>
+  .checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 900px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.checkbox-group > * {
+  margin: 0.5rem 0.5rem;
+}
+
+.checkbox-group-legend {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #9c9c9c;
+  text-align: center;
+  line-height: 1.125;
+  margin-bottom: 1.25rem;
+}
+
+
+.checkbox-input:focus + .checkbox-tile {
+  border-color: #2260ff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 0 0 4px #b5c9fc;
+}
+.checkbox-input:focus + .checkbox-tile:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  min-height: 7rem;
+  border-radius: 0.5rem;
+  border: 2px solid #b5bfd9;
+  background-color: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.15s ease;
+  cursor: pointer;
+  position: relative;
+}
+/* width='192' height='192' fill='%23FFFFFF' viewBox='0 0 256 256 */
+.checkbox-tile:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 1.50rem;
+  height: 1.50rem;
+  border: 2px solid #fff;
+  background-color: #012a3e;
+  border-radius: 50%;
+  top: 0.25rem;
+  left: 0.25rem;
+  opacity: 0;
+  transform: scale(0);
+  transition: 0.25s ease;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' style='fill: rgb(255, 255, 255);transform: ;msFilter:;'%3E%3Cpath d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z'%3E%3C/path%3E%3C/svg%3E");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.checkbox-tile:hover {
+  border-color: white;
+
+}
+.checkbox-tile:hover:before {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.checkbox-icon {
+  transition: 0.375s ease;
+  color: #494949;
+}
+.checkbox-icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.checkbox-tile:hover svg, .checkbox-tile:hover i {
+    
+    color:rgb(6 182 212);
+}
+
+
+.checkbox-tile:hover .checkbox-label{
+
+    font-weight: bolder;
+    color:rgb(6 182 212);
+}
+.checkbox-label {
+
+  color: #707070;
+  transition: 0.375s ease;
+  text-align: center;
+
+}
+
+
+    </style>
+         <Div >
+
+                    				<!-- Intro -->
+            <div class="container">
+              <div class="row">
+
+                <div class="col-md-5 ">
+                    <div class="circular--portrait" >
+							        <img src="/static/images/mm2.png" alt="photo"/>
+                    </div>
+                    <div class="move col-md">
+                      <h2>Abhishek Singh </h2>
+                    </div>
+                    
+
+
+                </div>
+
+                <div class="col-md-7 " style="font-size:1.2rem;"><br>
+                   <p class="text-justify"> Experienced
+ <b>data scientist</b> with a strong background in <b>web development</b> and <b>data engineering</b>. Proficient in creating and optimizing data pipelines, designing databases, and implementing ETL processes. Skilled in programming languages like Python, Java, and SQL. Expertise
+ in machine learning algorithms, statistical analysis, and data visualization. Adept at extracting actionable insights from complex datasets and translating them into meaningful business solutions. Proven ability to work collaboratively in cross-functional
+ teams and communicate technical concepts effectively to both technical and non-technical stakeholders.
+                    </p>
+                </div>
+                    <div class="move1 col-md ">
+                        <h5 class="text-break">
+                        <span class="badge bg-dark" style="color:#ffff;">Data Scientist</span>
+                        <span class="badge bg-dark" style="color:#ffff;">Data Engineer</span>
+                        <span class="badge bg-dark" style="color:#ffff;">MLOps Engineer</span>
+                        </h5>
+
+                </div>
+
+              </div>
+
+
+            </div>
+             <br><br>
+
+
+
+
+<div class="container">
+    <div class="row">
+<div class="col-sm-6">
+    <h4>Latest Certificates</h4>
+    <div id="accordion" class="myaccordion ">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="d-flex align-items-center justify-content-between btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          AWS Certificates
+          <span class="fa-stack fa-sm">
+            <i class="fas fa-circle fa-stack-2x"></i>
+            <i class="fas fa-plus fa-stack-1x fa-inverse"></i>
+          </span>
+
+        </button>
+      </h2>
+    </div>
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+      <div class="card-body">
+
+          <ul>
+    <li  class="" style="border-radius: 60%; cursor:pointer;" data-toggle="modal" data-target="#myModal">
+        <span class="fa-stack fa-2x">
+
+            <i class="fas fa-circle fa-stack-2x fa-spin"></i>
+            <i class="fas fa-brands fa-aws fa-stack-1x fa-inverse"></i>
+        </span>AWS Cloud Practitioner Essentials
+
+         </li>
+    <li  class="" style="border-radius: 60%; cursor:pointer;" data-toggle="modal" data-target="#myModal1">
+        <span class="fa-stack fa-2x">
+
+            <i class="fas fa-circle fa-stack-2x fa-spin"></i>
+            <i class="fas fa-brands fa-aws fa-stack-1x fa-inverse"></i>
+    </span>AWS Learning: Data Migration
+
+        </li>
+
+
+
+
+</ul>
+  <!-- Modal  -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h6 class="modal-title"></h6>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="../static/pdf/134_3_1458961_1664024650_AWS Course Completion Certificate.pdf" loading="lazy" width="100%" height="390px">
+                                                    </iframe>
+                              <p>AWS Cloud Practitioner Essentials </p>
+                            </div>
+
+                          </div>
+
+                        </div>
+
+
+                      </div>
+
+
+                    
+                      <div class="modal fade" id="myModal1" role="dialog">
+                        <div class="modal-dialog">
+
+                          <!-- Modal content-->
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="close" data-dismiss="modal">&times;</button>
+                              <h6 class="modal-title"></h6>
+                            </div>
+                            <div class="modal-body">
+                                <iframe src="../static/pdf/Aws_data_migration.pdf" loading="lazy" width="100%" height="390px">
+                                                    </iframe>
+                              <p>AWS Cloud Practitioner Essentials </p>
+                            </div>
+
+                          </div>
+
+                        </div>
+                  
+
+                      </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+</div>
+<div class="col-sm-6">
+    <h4>Learning Badges </h4>
+     <div class="row">
+    <div class="col-sm-2 ">
+
+            <a href="https://www.credly.com/earner/earned/badge/7cb885e1-46b1-4b25-91b7-d5e8e8d99970">
+                  <img src="../static/images/Badge.png" loading="lazy" width="100px" height="100px">
+            </a>
+        </div>&nbsp;&nbsp;
+            <div class="col-sm-2 ">
+
+            <a href="https://www.credly.com/earner/earned/badge/218aa725-4800-4640-a1b8-58defc27d3b5">
+                  <img src="../static/images/Advi_Data_Science_Specialization.png" loading="lazy" width="90px" height="90px">
+            </a>
+        </div>&nbsp;&nbsp;
+         <div class="col-sm-2 ">
+
+            <a href="https://www.credly.com/earner/earned/badge/1241948f-0973-4615-845a-a92777ffef35">
+                  <img   src="../static/images/cloud-native-security-conference-data-security.png" loading="lazy" width="80px" height="80px">
+            </a>
+        </div>
+         <div class="col-sm-2 ">
+
+            <a href="https://www.credly.com/earner/earned/badge/98e86753-dc32-41c1-bd5a-52064a0958f6">
+                  <img   src="../static/images/Applied_Data_Science_Capstone.png" loading="lazy" width="90px" height="90px">
+            </a>
+        </div>
+     </div>
+</div>
+</div>
+
+
+
+                <!-- /.container-fluid -->
+
+    <br><br><br>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+    <fieldset class="checkbox-group">
+	<legend class="checkbox-group-legend" style="color:#212529;">Familiar Technology stacks</legend>
+
+
+
+</fieldset>
+
+
+
+
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+        <i class='bx bxs-data fa-2x'  ></i>
+          Database stacks
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse " aria-labelledby="panelsStayOpen-headingOne">
+      <div class="accordion-body">
+        <div class="d-flex  justify-content-around ">
+                                                      <div class="checkbox">
+                                                    <a href="https://www.mysql.com/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+
+                                                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                                                                      <path fill="currentColor" fill-rule="evenodd" d="M5.46192862,4.04007684 C5.18892668,4.03501656 4.99575061,4.06967946 4.79169495,4.11446291 L4.79169495,4.15152944 L4.82901449,4.15152944 C4.95944313,4.41909158 5.18943271,4.591394 5.35034952,4.82188962 C5.47407329,5.08262038 5.59817658,5.34297163 5.72227987,5.60332288 C5.73493056,5.5909252 5.74745474,5.57865403 5.75959941,5.56625635 C5.99047454,5.40394797 6.0957283,5.14410275 6.09471625,4.74737704 C6.00211318,4.64996671 5.98832392,4.52826705 5.90837155,4.4122602 C5.80235875,4.25754224 5.59615247,4.17012595 5.46192862,4.04007684 L5.46192862,4.04007684 Z M23.478665,23.1369293 C23.6543831,23.2658398 23.772161,23.4657208 24,23.5466852 L24,23.5093657 C23.8800714,23.3573044 23.8495833,23.1474294 23.7395222,22.9880306 C23.5786054,22.8271138 23.4164236,22.6655645 23.2555068,22.5040152 C22.7821179,21.8759083 22.1818425,21.3245911 21.5432356,20.8663831 C21.0345512,20.5006515 19.8944709,20.0072745 19.6819392,19.4148426 C19.6697946,19.4021919 19.6571439,19.3896677 19.6444932,19.3770171 C20.0054174,19.3365348 20.4283301,19.2059797 20.7614228,19.1165393 C21.3210894,18.9665021 21.8214243,19.0054662 22.3990549,18.8560615 C22.6600387,18.781296 22.9203899,18.7066569 23.1808677,18.6329033 L23.1808677,18.4834987 C22.8887632,18.1836773 22.6805328,17.7869515 22.3622414,17.5155942 C21.5283078,16.8061434 20.6188495,16.0966926 19.6818127,15.5056522 C19.1626283,15.1774933 18.5200996,14.9645821 17.969415,14.6865199 C17.7842089,14.5931578 17.4590861,14.5444526 17.3365009,14.3887226 C17.0476856,14.0198284 16.8899314,13.5523853 16.6667732,13.1228943 C16.1997097,12.2230506 15.740363,11.2403448 15.3263059,10.293567 C15.044322,9.6481287 14.8597484,9.01154587 14.5076796,8.43227067 C12.8174206,5.65329311 10.9976185,3.97581132 8.17942382,2.3270466 C7.57927498,1.97649592 6.85742648,1.83809735 6.09471625,1.65719245 C5.68546635,1.6325236 5.27545742,1.60734872 4.86620752,1.58267987 C4.61635635,1.47831166 4.35651113,1.17267094 4.12184079,1.02427832 C3.18796669,0.434503045 0.792811133,-0.848656668 0.10157731,0.838313141 C-0.335124586,1.90286889 0.753847001,2.94174374 1.14361483,3.48142227 C1.4172493,3.85980447 1.76704094,4.2842352 1.96287366,4.70967798 C2.09127818,4.98938478 2.11316388,5.27010364 2.22385744,5.56600333 C2.49432924,6.29518923 2.7293791,7.08838764 3.07929725,7.76241652 C3.25653344,8.10322617 3.45173363,8.46263233 3.67539786,8.76738751 C3.81265788,8.95449125 4.04720171,9.03684725 4.08401522,9.32578906 C3.85465817,9.64749617 3.84150145,10.1466925 3.7125909,10.5541713 C3.13065906,12.3887747 3.35014857,14.6686824 4.19660638,16.0266077 C4.45594557,16.443195 5.06773305,17.3374725 5.90837155,16.9942592 C6.64375629,16.6946908 6.47980332,15.76613 6.69018433,14.9469976 C6.73749792,14.760906 6.70865434,14.624405 6.80176344,14.5003017 L6.80176344,14.5373682 C7.02542767,14.9840642 7.2488389,15.4307601 7.47199711,15.8773296 C7.96815726,16.6759678 8.84826592,17.5111665 9.59415073,18.0739958 C9.98037636,18.3659737 10.2848785,18.8709894 10.7852134,19.0419002 L10.7852134,19.0040746 L10.7478939,19.0040746 C10.6504835,18.8536579 10.4989282,18.790531 10.3759635,18.6694638 C10.0844916,18.3836847 9.76050733,18.0287063 9.51938514,17.7014329 C8.84080201,16.780589 8.24153872,15.7725818 7.69553484,14.7235864 C7.43455106,14.2224925 7.20785066,13.6697838 6.98785512,13.1600874 C6.90322199,12.9633691 6.90423404,12.6662043 6.72737736,12.5643663 C6.48650818,12.9378147 6.13190928,13.2401663 5.94556458,13.6811694 C5.64776729,14.386319 5.60943569,15.2461865 5.49899515,16.1379338 C5.43371758,16.1614641 5.46268766,16.1453977 5.42422956,16.1750003 C4.90555118,16.0502645 4.72350772,15.5164053 4.53096418,15.0584502 C4.04378602,13.9006589 3.95333357,12.0360734 4.38206553,10.7030699 C4.4930121,10.3583386 4.99499157,9.27202362 4.79131543,8.95347919 C4.69441112,8.63544079 4.37510765,8.45187925 4.19635337,8.20885945 C3.97420721,7.90853201 3.75332613,7.5134509 3.59974672,7.16644241 C3.20150293,6.26368901 3.01528474,5.25024206 2.59540827,4.33749461 C2.39451528,3.90142525 2.0550972,3.45966308 1.77627595,3.07166635 C1.46759906,2.64204884 1.12185564,2.32578153 0.882884062,1.80583808 C0.797744903,1.62126448 0.681991069,1.32587082 0.808244978,1.13598393 C0.848094658,1.00783242 0.905022773,0.954446496 1.03190922,0.912572704 C1.24810955,0.746089595 1.84889092,0.967982736 2.07394674,1.06147135 C2.67055338,1.30929841 3.16924367,1.54548684 3.67489184,1.88035066 C3.91740561,2.04126747 4.16295554,2.35272751 4.45607208,2.43887872 L4.79118892,2.43887872 C5.31568662,2.5591868 5.90280525,2.47645128 6.39200751,2.62509691 C7.25744137,2.8881048 8.0329288,3.29722819 8.73719284,3.74202653 C10.8826237,5.09653615 12.6370217,7.02526068 13.8370664,9.32578906 C14.030116,9.69620133 14.1138635,10.0496617 14.2836358,10.4427187 C14.6265961,11.2350315 15.0591233,12.0501156 15.4004389,12.825097 C15.7408691,13.5978013 16.0728232,14.3779695 16.5541821,15.0213837 C16.8071959,15.3594102 17.7850944,15.5408211 18.2297663,15.7288104 C18.5412263,15.8602511 19.0514287,15.9976376 19.3460633,16.1750003 C19.9100312,16.5151775 20.4556556,16.9197466 20.9842015,17.292183 C21.2483479,17.4785277 22.0606489,17.886639 22.1006251,18.2223884 C20.7916579,18.1877255 19.7916207,18.3092986 18.9366869,18.6695903 C18.6936671,18.7716814 18.3064295,18.7747176 18.2664533,19.0787137 C18.4000446,19.2186304 18.4211712,19.4281259 18.527437,19.6000488 C18.7309867,19.9304848 19.0755915,20.3728795 19.3833829,20.6053993 C19.7195118,20.8590456 20.0657612,21.130403 20.4255469,21.3498925 C21.0663045,21.7407989 21.7818276,21.9638306 22.3984224,22.3551165 C22.7632683,22.5861182 23.1241926,22.8764515 23.478665,23.1369293 L23.478665,23.1369293 Z"/>
+                                                                                    </svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">MySQL</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://www.postgresql.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <i class='bx bxl-postgresql fa-3x' fill="currentColor"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">PostgreSQL</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://aws.amazon.com/rds/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                               </i> <i class="fa-brands fa-aws fa-3x" fill="currentColor"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Amazon RDS</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://google.com" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                               <i class='bx bxl-mongodb fa-3x' fill="currentColor"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">MongoDB</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+
+
+
+</div>
+      </div>
+    </div>
+  </div>
+  
+        <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+        <svg role="img" viewBox="0 0 24 24"  width="28px" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title></title><path d="M12.002.072a8.302 8.302 0 0 0-8.266 7.512L.498 9.454l4.682 2.704A7.8 7.8 0 0 1 12.002.572a7.802 7.802 0 0 1 6.824 11.582l4.676-2.7-3.236-1.87A8.302 8.302 0 0 0 12.002.072zM0 9.742v7.399l11.75 6.787v-7.399L0 9.742zm24 0l-5.777 3.338-5.248 3.031h-.002l-.108.063-.615.355v7.399L24 17.14V9.744z"/></svg>&nbsp; Data Tools
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+      <div class="accordion-body">
+
+                                <div class="d-flex  justify-content-around ">
+
+                                                      <div class="checkbox">
+                                                    <a href="https://scikit-learn.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+
+                                                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>scikit-learn</title><path d="M15.601 5.53c-1.91.035-3.981.91-5.63 2.56-2.93 2.93-2.083 8.53-1.088 9.525.805.804 6.595 1.843 9.526-1.088a9.74 9.74 0 0 0 .584-.643c.043-.292.205-.66.489-1.106a1.848 1.848 0 0 1-.537.176c-.144.265-.37.55-.676.855-.354.335-.607.554-.76.656a.795.795 0 0 1-.437.152c-.35 0-.514-.308-.494-.924-.22.316-.425.549-.612.7a.914.914 0 0 1-.578.224c-.194 0-.36-.09-.496-.273a1.03 1.03 0 0 1-.193-.507 4.016 4.016 0 0 1-.726.583c-.224.132-.47.197-.74.197-.3 0-.543-.096-.727-.288a.978.978 0 0 1-.257-.524v.004c-.3.276-.564.48-.79.611a1.295 1.295 0 0 1-.649.197.693.693 0 0 1-.571-.275c-.145-.183-.218-.43-.218-.739 0-.464.101-1.02.302-1.67.201-.65.445-1.25.733-1.797l.842-.312a.21.21 0 0 1 .06-.013c.063 0 .116.047.157.14.04.095.061.221.061.38 0 .451-.104.888-.312 1.31-.207.422-.532.873-.974 1.352-.018.23-.027.388-.027.474 0 .193.036.345.106.458.071.113.165.169.282.169a.71.71 0 0 0 .382-.13c.132-.084.333-.26.602-.523.028-.418.187-.798.482-1.142.324-.38.685-.569 1.08-.569.206 0 .37.054.494.16a.524.524 0 0 1 .186.417c0 .458-.486.829-1.459 1.114.088.43.32.646.693.646a.807.807 0 0 0 .417-.117c.129-.076.321-.243.575-.497.032-.252.118-.495.259-.728.182-.3.416-.544.701-.73.285-.185.537-.278.756-.278.276 0 .47.127.58.381l.677-.374h.186l-.292.971c-.15.488-.226.823-.226 1.004 0 .19.067.285.202.285.086 0 .181-.045.285-.137.104-.092.25-.232.437-.42v.001c.143-.155.274-.32.392-.494-.19-.084-.285-.21-.285-.375 0-.17.058-.352.174-.545.116-.194.275-.29.479-.29.172 0 .258.088.258.265 0 .139-.05.338-.149.596.367-.04.687-.32.961-.842l.228-.01c1.059-2.438.828-5.075-.83-6.732-1.019-1.02-2.408-1.5-3.895-1.471zm4.725 8.203a8.938 8.938 0 0 1-1.333 2.151 1.09 1.09 0 0 0-.012.147c0 .168.047.309.14.423.092.113.206.17.34.17.296 0 .714-.264 1.254-.787-.001.04-.003.08-.003.121 0 .146.012.368.036.666l.733-.172c0-.2.003-.357.01-.474.01-.157.033-.33.066-.517.02-.11.07-.216.152-.315l.186-.216a5.276 5.276 0 0 1 .378-.397c.062-.055.116-.099.162-.13a.26.26 0 0 1 .123-.046c.055 0 .083.035.083.106 0 .07-.052.236-.156.497-.194.486-.292.848-.292 1.084 0 .175.046.314.136.418a.45.45 0 0 0 .358.155c.365 0 .803-.269 1.313-.808v-.381c-.361.426-.623.64-.784.64-.109 0-.163-.067-.163-.2 0-.1.065-.316.195-.65.19-.486.285-.836.285-1.048a.464.464 0 0 0-.112-.319.36.36 0 0 0-.282-.127c-.165 0-.354.077-.567.233-.213.156-.5.436-.863.84.053-.262.165-.622.335-1.08l-.809.156a6.54 6.54 0 0 0-.399 1.074c-.04.156-.07.316-.092.48a7.447 7.447 0 0 1-.49.45.38.38 0 0 1-.229.08.208.208 0 0 1-.174-.082.352.352 0 0 1-.064-.222c0-.1.019-.214.056-.343.038-.13.12-.373.249-.731l.308-.849zm-17.21-2.927c-.863-.016-1.67.263-2.261.854-1.352 1.352-1.07 3.827.631 5.527 1.7 1.701 4.95 1.21 5.527.632.467-.466 1.07-3.827-.631-5.527-.957-.957-2.158-1.465-3.267-1.486zm12.285.358h.166v.21H15.4zm.427 0h.166v.865l.46-.455h.195l-.364.362.428.684h-.198l-.357-.575-.164.166v.41h-.166zm1.016 0h.166v.21h-.166zm.481.122h.166v.288h.172v.135h-.172v.717c0 .037.006.062.02.075.012.013.037.02.074.02a.23.23 0 0 0 .078-.01v.141a.802.802 0 0 1-.136.014.23.23 0 0 1-.15-.043.15.15 0 0 1-.052-.123v-.79h-.141v-.136h.141zm-3.562.258c.081 0 .15.012.207.038.057.024.1.061.13.11s.045.106.045.173h-.176c-.006-.111-.075-.167-.208-.167a.285.285 0 0 0-.164.041.134.134 0 0 0-.06.117c0 .035.015.065.045.088.03.024.08.044.15.06l.16.039a.47.47 0 0 1 .224.105c.047.046.07.108.07.186a.3.3 0 0 1-.052.175.327.327 0 0 1-.152.116.585.585 0 0 1-.226.041c-.136 0-.24-.03-.309-.088-.069-.059-.105-.149-.109-.269h.176c.004.037.01.065.017.084a.166.166 0 0 0 .034.054c.044.043.112.065.204.065a.31.31 0 0 0 .177-.045.139.139 0 0 0 .067-.119.116.116 0 0 0-.038-.09.287.287 0 0 0-.124-.055l-.156-.038a1.248 1.248 0 0 1-.159-.05.359.359 0 0 1-.098-.061.22.22 0 0 1-.058-.083.32.32 0 0 1-.016-.108c0-.096.036-.174.109-.232a.45.45 0 0 1 .29-.087zm1.035 0a.46.46 0 0 1 .202.043.351.351 0 0 1 .187.212.577.577 0 0 1 .023.126h-.168a.256.256 0 0 0-.078-.168.242.242 0 0 0-.17-.06.248.248 0 0 0-.155.05.306.306 0 0 0-.1.144.662.662 0 0 0-.034.224.58.58 0 0 0 .035.214.299.299 0 0 0 .101.135.261.261 0 0 0 .157.048c.142 0 .227-.084.256-.252h.167a.519.519 0 0 1-.065.22.35.35 0 0 1-.146.138.464.464 0 0 1-.216.048.448.448 0 0 1-.246-.066.441.441 0 0 1-.161-.192.703.703 0 0 1-.057-.293c0-.085.01-.163.032-.233a.522.522 0 0 1 .095-.182.403.403 0 0 1 .15-.117.453.453 0 0 1 .191-.04zm.603.03h.166v1.046H15.4zm1.443 0h.166v1.046h-.166zm-5.05.618c-.08 0-.2.204-.356.611-.155.407-.308.977-.459 1.71.281-.312.509-.662.683-1.05.175-.387.262-.72.262-.999a.455.455 0 0 0-.036-.197c-.025-.05-.056-.075-.093-.075zm4.662 1.797c-.221 0-.431.188-.629.563-.197.376-.296.722-.296 1.038 0 .12.029.216.088.29a.273.273 0 0 0 .223.111c.221 0 .43-.188.625-.565.196-.377.294-.725.294-1.043a.457.457 0 0 0-.083-.29.269.269 0 0 0-.222-.104zm-2.848.007c-.146 0-.285.11-.417.333-.133.222-.2.51-.2.866.566-.159.849-.452.849-.881 0-.212-.077-.318-.232-.318Z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Scikit-learn</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                 <div class="checkbox">
+                                                    <a href="https://pandas.pydata.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Pandas</title><path d="M16.922 0h2.623v18.104h-2.623zm-4.126 12.94h2.623v2.57h-2.623zm0-7.037h2.623v5.446h-2.623zm0 11.197h2.623v5.446h-2.623zM4.456 5.896h2.622V24H4.455zm4.213 2.559h2.623v2.57H8.67zm0 4.151h2.623v5.447H8.67zm0-11.187h2.623v5.446H8.67Z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Pandas</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://numpy.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                 <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>NumPy</title><path d="M10.315 4.876L6.3048 2.8517l-4.401 2.1965 4.1186 2.0683zm1.8381.9277l4.2045 2.1223-4.3622 2.1906-4.125-2.0718zm5.6153-2.9213l4.3193 2.1658-3.863 1.9402-4.2131-2.1252zm-1.859-.9329L12.021 0 8.1742 1.9193l4.0068 2.0208zm-3.0401 16.7443V24l4.7107-2.3507-.0053-5.3085zm4.7037-4.2057l-.0052-5.2528-4.6985 2.3356v5.2546zm5.6553-.9845v5.327l-4.0178 2.0052-.0029-5.3028zm0-1.8626V6.4214l-4.0253 2.001.0034 5.2633zM11.2062 11.571L8.0333 9.9756v6.895s-3.8804-8.2564-4.2399-8.998c-.0463-.0957-.2371-.2007-.2858-.2262C2.8118 7.2812.773 6.2485.773 6.2485V18.43l2.8204 1.5076v-6.3674s3.8392 7.3775 3.878 7.458c.0389.0807.4245.8582.8362 1.1314.5485.363 2.8992 1.7766 2.8992 1.7766z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Numpy</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://jupyter.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                              <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor" ><title>Jupyter</title><path d="M7.157 22.201A1.784 1.799 0 0 1 5.374 24a1.784 1.799 0 0 1-1.784-1.799 1.784 1.799 0 0 1 1.784-1.799 1.784 1.799 0 0 1 1.783 1.799zM20.582 1.427a1.415 1.427 0 0 1-1.415 1.428 1.415 1.427 0 0 1-1.416-1.428A1.415 1.427 0 0 1 19.167 0a1.415 1.427 0 0 1 1.415 1.427zM4.992 3.336A1.047 1.056 0 0 1 3.946 4.39a1.047 1.056 0 0 1-1.047-1.055A1.047 1.056 0 0 1 3.946 2.28a1.047 1.056 0 0 1 1.046 1.056zm7.336 1.517c3.769 0 7.06 1.38 8.768 3.424a9.363 9.363 0 0 0-3.393-4.547 9.238 9.238 0 0 0-5.377-1.728A9.238 9.238 0 0 0 6.95 3.73a9.363 9.363 0 0 0-3.394 4.547c1.713-2.04 5.004-3.424 8.772-3.424zm.001 13.295c-3.768 0-7.06-1.381-8.768-3.425a9.363 9.363 0 0 0 3.394 4.547A9.238 9.238 0 0 0 12.33 21a9.238 9.238 0 0 0 5.377-1.729 9.363 9.363 0 0 0 3.393-4.547c-1.712 2.044-5.003 3.425-8.772 3.425Z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Jupyter</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://pypi.org/project/pyspark/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                              <svg width="28px"  viewBox="0 0 908 726" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+<path  d="M698.332 612.25C696.234 607.961 695.258 605.764 694.1 603.707C663.358 548.127 632.688 492.477 601.692 437.036C598.545 431.492 598.943 428.179 603.211 423.437C652.11 369.112 700.755 314.578 749.473 260.079C751.173 258.196 752.728 256.139 753.379 252.756C739.129 256.278 724.879 259.765 710.665 263.356C651.567 278.245 592.469 293.099 533.444 308.162C527.946 309.557 525.451 308.058 522.702 303.699C489.175 250.42 455.43 197.246 421.722 144.071C419.986 141.282 418.105 138.597 414.416 136.296C411.704 150.487 408.919 164.679 406.279 178.87L378.176 329.293C377.164 334.732 375.753 340.102 375.283 345.576C374.777 350.737 372.028 352.654 367.073 354.119C297.451 374.9 227.9 395.891 158.314 416.882C155.276 417.789 152.274 418.974 149.019 421.798L320.598 486.654C318.5 488.223 317.126 489.443 315.607 490.42C280.018 512.317 244.356 534.11 208.912 556.112C204.644 558.727 201.281 559.11 196.507 557.053C154.01 538.887 111.332 521.034 68.799 502.937C49.6664 494.813 32.4868 484.039 19.1048 468.487C-11.1675 433.27 -5.19981 393.241 35.127 368.764C48.3282 360.744 63.3378 354.781 78.2388 350.144C146.451 329.014 214.916 308.65 283.309 288.183C289.06 286.474 291.736 284.033 292.785 278.141C301.899 227.93 311.375 177.824 320.851 127.683C325.951 100.904 328.663 73.3931 342.371 48.8806C347.651 39.3964 353.944 30.1562 361.467 22.2411C388.593 -6.42078 426.533 -7.53656 455.25 19.8003C464.943 29.0056 473.261 39.8845 480.495 51.0076C512.105 100.067 543.245 149.441 574.169 198.85C577.858 204.742 581.149 205.893 587.912 204.185C664.226 184.728 740.612 165.585 816.962 146.408C832.731 142.433 848.644 141.003 864.811 143.862C900.038 150.138 915.446 175.593 903.51 207.95C898.085 222.665 888.718 235.148 878.193 246.864C824.918 306.489 771.716 366.114 718.26 425.564C713.884 430.446 713.775 433.933 716.813 439.372C748.713 496.556 780.324 553.845 812.079 611.099C819.674 624.802 825.461 638.994 825.642 654.754C826.003 690.564 798.516 719.854 761.083 725.049C740.105 727.978 720.647 723.724 701.044 717.971C653.195 703.884 605.273 690.076 557.314 676.373C552.866 675.083 551.166 673.444 550.406 668.876C544.873 636.797 538.869 604.788 533.046 572.744C532.901 571.872 533.155 570.931 533.299 568.943L698.332 612.25Z" fill="currentColor" />
+</svg>
+
+                                                            </span>
+                                                            <span class="checkbox-label  ">PySpark</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                                    <div class="checkbox">
+                                                    <a href="https://spark.apache.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <svg role="img" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Apache Spark</title><path d="M10.812 0c-.425.013-.845.215-1.196.605a3.593 3.593 0 00-.493.722c-.355.667-.425 1.415-.556 2.143a551.9 551.9 0 00-.726 4.087c-.027.16-.096.227-.244.273C5.83 8.386 4.06 8.94 2.3 9.514c-.387.125-.773.289-1.114.506-1.042.665-1.196 1.753-.415 2.71.346.422.79.715 1.284.936 1.1.49 2.202.976 3.3 1.47.019.01.036.013.053.019h-.004l1.306.535c0 .023.002.045 0 .073-.2 2.03-.39 4.063-.58 6.095-.04.419-.012.831.134 1.23.317.87 1.065 1.148 1.881.701.372-.204.666-.497.937-.818 1.372-1.623 2.746-3.244 4.113-4.872.111-.133.205-.15.363-.098.349.117.697.231 1.045.347h.001c.02.012.045.02.073.03l.142.042c1.248.416 2.68.775 3.929 1.19.4.132.622.164 1.045.098.311-.048.592-.062.828-.236.602-.33.995-.957.988-1.682-.005-.427-.154-.813-.35-1.186-.82-1.556-1.637-3.113-2.461-4.666-.078-.148-.076-.243.037-.375 1.381-1.615 2.756-3.236 4.133-4.855.272-.32.513-.658.653-1.058.308-.878-.09-1.57-1-1.741a2.783 2.783 0 00-1.235.069c-1.974.521-3.947 1.041-5.918 1.57-.175.047-.26.015-.355-.144a353.08 353.08 0 00-2.421-4.018 4.61 4.61 0 00-.652-.849c-.371-.37-.802-.549-1.227-.536zm.172 3.703a.592.592 0 01.189.211c.87 1.446 1.742 2.89 2.609 4.338.07.118.135.16.277.121 1.525-.41 3.052-.813 4.579-1.217.367-.098.735-.193 1.103-.289a.399.399 0 01-.1.2c-1.259 1.48-2.516 2.962-3.779 4.438-.11.13-.12.22-.04.37.937 1.803 1.768 3.309 2.498 4.76l-3.696-1.019c-.538-.18-1.077-.358-1.615-.539-.163-.055-.25-.03-.36.1-1.248 1.488-2.504 2.97-3.759 4.454a.398.398 0 01-.18.132c.035-.378.068-.757.104-1.136.149-1.572.297-3.144.451-4.716-.03-.318.117-.405-.322-.545-1.493-.593-3.346-1.321-4.816-1.905a.595.595 0 01.24-.134c1.797-.57 3.595-1.14 5.394-1.705.127-.04.199-.092.211-.233.013-.148.05-.294.076-.441.241-1.363.483-2.726.726-4.088.068-.386.14-.771.21-1.157z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Apache Spark</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+
+                                                                                           <div class="checkbox">
+                                                    <a href="https://airflow.apache.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <svg role="img" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Apache Airflow</title><path d="M17.195 16.822l4.002-4.102C23.55 10.308 23.934 5.154 24 .43a.396.396 0 0 0-.246-.373.392.392 0 0 0-.437.09l-6.495 6.658-4.102-4.003C10.309.45 5.154.066.43 0H.423a.397.397 0 0 0-.277.683l6.658 6.494-4.003 4.103C.45 13.692.065 18.846 0 23.57a.398.398 0 0 0 .683.282l6.494-6.657 3.934 3.837.17.165c2.41 2.353 7.565 2.737 12.288 2.803h.006a.397.397 0 0 0 .277-.683l-6.657-6.495zm-.409-9.476c.04.115.05.24.031.344-.17.96-1.593 2.538-4.304 3.87a.597.597 0 0 0-.08-.079c1.432-3.155 1.828-5.61 1.175-7.322l3.058 2.984.12.203zm-.131 9.44a.73.73 0 0 1-.347.031c-.96-.171-2.537-1.594-3.87-4.307a.656.656 0 0 0 .08-.078l-.001.001c3.155 1.432 5.61 1.83 7.324 1.174l-2.969 3.043M23.568.392a.05.05 0 0 1 .052-.011c.018.006.03.024.029.043-.065 4.655-.437 9.726-2.703 12.05-1.53 1.565-4.326 1.419-8.283-.377.006-.037.021-.07.02-.108 0-.044-.017-.082-.026-.123 2.83-1.39 4.315-3.037 4.506-4.115.057-.322-.009-.542-.102-.688l6.507-6.67V.392zM.393.43A.045.045 0 0 1 .382.38C.39.36.403.343.425.35c4.655.065 9.727.438 12.05 2.703l.002.002c1.56 1.527 1.415 4.323-.379 8.28-.033-.005-.062-.02-.097-.02h-.008c-.045.001-.084.019-.126.027-1.39-2.83-3.037-4.314-4.115-4.506-.323-.057-.542.01-.688.103L.393.43zm11.94 11.563a.331.331 0 0 1-.327.335H12a.332.332 0 0 1-.004-.661c.172.016.333.144.335.326h.002zm-5.12 4.661a.722.722 0 0 1-.03-.345c.17-.96 1.595-2.54 4.309-3.873.013.016.019.035.033.05.013.012.03.017.044.028-1.434 3.158-1.83 5.613-1.177 7.326l-3.041-2.967m-.006-9.659a.735.735 0 0 1 .345-.031c.961.17 2.54 1.594 3.871 4.306a.597.597 0 0 0-.079.08c-2.167-.983-4.007-1.484-5.498-1.484-.68 0-1.289.103-1.825.308L7.128 7.35M.43 23.607c-.018.018-.038.015-.052.01-.019-.007-.028-.021-.028-.043.065-4.654.437-9.725 2.703-12.049 1.527-1.565 4.325-1.419 8.286.378-.006.035-.02.067-.02.104 0 .043.018.083.026.124-2.831 1.391-4.317 3.04-4.51 4.117-.057.322.01.542.103.688L.43 23.607zm23.144.042c-4.655-.065-9.726-.437-12.05-2.703l-.005-.006c-1.56-1.526-1.412-4.322.383-8.279.033.005.064.02.098.02h.009c.043 0 .08-.018.122-.027 1.39 2.832 3.036 4.317 4.115 4.51.083.014.16.021.23.021a.776.776 0 0 0 .45-.133l6.68 6.516c.02.02.016.04.01.052a.042.042 0 0 1-.042.029z"/></svg>
+                                                            </span>
+                                                            <span class="checkbox-label  ">Apache Airflow</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+
+
+                                </div>
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  
+  
+  
+  
+  
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+       <i class="fa-brands fa-cloudsmith fa-2x">&nbsp;</i>  Programming language
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+      <div class="accordion-body">
+                <div class="d-flex  justify-content-around ">
+
+                                                      <div class="checkbox">
+                                                    <a href="https://www.python.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <i class="fa-brands fa-python fa-3x" fill="currentColor"></i>
+
+                                                            </span>
+                                                            <span class="checkbox-label  ">Python</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                 <div class="checkbox">
+                                                    <a href="https://www.r-project.org/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <i class="fa-brands fa-r-project fa-3x"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">R</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                 <i class='fa-brands fa-square-js fa-3x '   ></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">JavaScript</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                               <i class="fa-brands fa-html5 fa-3x"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">HTML</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <i class="fa-brands fa-css3-alt fa-3x"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">CSS</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+                                                                    <div class="checkbox">
+                                                    <a href="https://www.php.net/" class="checkbox-input" class="nounderline">
+                                                    <label class="checkbox-wrapper">
+
+                                                        <span class="checkbox-tile">
+                                                            <span class="checkbox-icon">
+                                                                <i class="fa-brands fa-php fa-3x"></i>
+                                                            </span>
+                                                            <span class="checkbox-label  ">PHP</span>
+                                                        </span>
+                                                    </label>
+                                                </a>
+                                                </div>
+
+
+
+
+</div>
+
+
+
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+        <i class="fa-brands fa-dev fa-2x">&nbsp;</i>Ops stacks
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+      <div class="accordion-body">
+
+        <div class="d-flex  justify-content-around ">
+
+            <div class="checkbox">
+		<a href="https://www.docker.com/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+					<i class="fa-brands fa-docker  fa-3x" fill="currentColor"></i>
+				</span>
+				<span class="checkbox-label  ">Docker</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://git-scm.com/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                     <i class='bx bx-git-pull-request fa-3x '   ></i>
+				</span>
+				<span class="checkbox-label  ">Git</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://en.wikipedia.org/wiki/Linux" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                    <i class="fa-brands fa-ubuntu fa-3x"></i>
+				</span>
+				<span class="checkbox-label  ">Linux/Unix</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://slack.com/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                      <i class="fa-brands fa-slack fa-3x"></i>
+				</span>
+				<span class="checkbox-label  ">Slack</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                     <i class="fa-solid fa-cloud fa-2x"></i>
+				</span>
+				<span class="checkbox-label  ">VPC</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://aws.amazon.com/security/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                       <i class="fa-solid fa-shield fa-2x"></i>
+				</span>
+				<span class="checkbox-label  ">Security</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://www.vim.org/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon" >
+                                <i class="fa-solid fa-i-cursor fa-2x" title="Text Editors"></i>
+				</span>
+				<span class="checkbox-label  ">Vim/ Nano</span>
+			</span>
+		</label>
+	</a>
+	</div>
+    <div class="checkbox">
+		<a href="https://aws.amazon.com/" class="checkbox-input" class="nounderline">
+		<label class="checkbox-wrapper">
+
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+                <i class="fa-brands fa-aws fa-3x"></i>
+				</span>
+				<span class="checkbox-label  ">AWS Cloud</span>
+			</span>
+		</label>
+	</a>
+	</div>
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+    <br><br><br><br><br>
+ <br><br><br><br><br>
+
+</div>
+
+
+
+
+</div>
+
+
+</Div >
+
+
+
+<br><br>
+
+<button onclick="topFunction()" id="myBtn" class="change" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+<Script>
+
+      // Get the button:
+  let mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</Script>
+
+
+
+<div class="container">
+ <div class="d-flex justify-content-around" style="margin-right:10% ;">
+           <div id="copyright col-md-8 " style="position: fixed;
+
+left: 0;
+bottom: 0;
+border-top: solid rgba(255,255,255,1);
+box-shadow: 3px 4px 5 px 6px #fffff   ;
+
+width: 100%;color:#C97C59; text-align: center; text-decoration:none; background-color: #012a3e;">
+
+        <div class="  container-fluid"><br>
+        <a href="https://www.google.com/search?q=United+Kingdom"style="color:lightgrey ;text-decoration:none; ;"><i class="fa-solid fa-map-pin fa-xl ">&nbsp;</i>United Kingdom</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Mailto:sighabh@gmail.com"style="color:lightgrey; text-decoration:none;  "><i class="fa-solid fa-envelope-circle-check fa-xl" >&nbsp;</i>sighabh@gmail.com</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/AbsTheAnalyst" style="color:white"><i class="fa-brands fa-github fa-xl ">&nbsp;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" style="color:white"><i class="fa-brands fa-linkedin fa-xl">&nbsp;</i></a>
+
+       &nbsp;&nbsp;&nbsp;<l style="font-family: cinzel;">Designed By: <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"></a></l> <l style="font-family: centzel;">Abhishek Singh&nbsp;&nbsp;<i class="fa-solid fa-copyright fa-lg fa-beat" style="--fa-animation-duration: 2s;">&nbsp;</i> </l>
+
+        </div>
+        <br>
+    </div>
+     </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a60f39abb1.js" crossorigin="anonymous"></script>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/popper.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

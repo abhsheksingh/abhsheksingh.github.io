@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABS-Abhishek Singh | Data Scientist | Liverpool | United Kingdom</title>
+    <meta name="description" content="Portfolio website of ABS">
+    <meta name="keywords" content="Data, Data Scientist, Web Developer">
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="active">
+
+                    <!-- Logo Below -->
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg  class ="mCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: left;  display: block; shape-rendering: auto;" width="100px" height="100px" >
+                                <g transform="translate(50 50)">
+                                <g transform="scale(0.5)">
+                                <g transform="translate(-50 -50)">
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="0.7575757575757576s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#F5F5F5" d="M50 50L50 0A50 50 0 0 1 100 50Z"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.0101010101010102s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#01395C" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(90 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.5151515151515151s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#007eb6" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(180 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="3.0303030303030303s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#0067A1" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(270 50 50)"></path>
+                                </g>
+                                </g>
+                                </g>
+                                </g>
+                                <svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg">
+                                    <style>
+
+                                    .heavy { font: normal 40px cinzel ;fill: rgb(247, 246, 245) }
+
+                                    </style>
+
+                                    <text x="140" y="200" class="heavy">A-b-s</text>
+
+                                </svg>
+                        </svg>
+                <!-- Logo Above -->
+
+                    <ul class="list-unstyled components mb-5" >
+<!--                        style="color:lightgrey ;"-->
+                      <br>
+                      <li class="active" title="Skills" data-bs-toggle="tooltip" data-bs-placement="right">
+                        <a href="skills.html" style="text-decoration: none; "aria-label="Skills" ><span class="fa-solid fa-keyboard" aria-hidden="true"></span>Skills</a>
+                      </li>             <!-- style="color:#ED8758;" -->
+                      <li>
+                          <a href="experience.html" style="text-decoration: none;" aria-label="Experience"><span class="fa-solid fa-person-digging"></span>Experience</a>
+                      </li>
+                      <!-- <i class="fa-solid fa-person-digging"></i> -->
+                      <li>
+                        <a href="education.html" style="text-decoration: none;" aria-label="Education" ><span class="fa-brands fa-odnoklassniki"></span>Education</a>
+                      </li>
+                      <li>
+                        <a href="certificates.html" style="text-decoration: none;" aria-label="Certificates"><span class="fa-solid fa-ribbon" ></span>Certificates</a>
+                      </li>
+
+                      <li>
+
+                        <a href="gallery.html" style="text-decoration: none;" aria-label="Gallery"><span class="fa-solid fa-clover"></span>Gallery</a>
+                      </li>
+
+                      <li>
+                          <a href="resume.html" style="text-decoration: none;" aria-label="Resume"><span class="fa-solid fa-address-card"><sup><i class="fa-solid fa-circle-down fa-2xs" style="color:limegreen;"></i></sup></span>CV</a>
+                      </li>
+
+                      <!-- <i class="fa-solid fa-arrows-spin"></i> -->
+<!--  -->
+                      <!-- <i class="fa-solid fa-universal-access"></i> -->
+
+                    </ul>
+
+                    <div class="footer">
+                        <p>
+                                  Copyright &copy;&nbsp;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                                </p>
+                    </div>
+    	</nav>
+
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto"  style="color:white;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" ></i>
+            </button>&nbsp;&nbsp;<h3>Abhishek Singh</h3>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://github.com/AbsTheAnalyst"><i class="fa-brands fa-github fa-xl "></i>&nbsp;github</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"><i class="fa-brands fa-linkedin fa-xl"></i>&nbsp;linkedin</a>
+                </li>
+                  <li class="nav-item active">
+                    <a class="nav-link ">
+                      <i class="fa-solid fa-eye fa-xl"  class="badge bg-secondary position-relative">&nbsp;</i>Profile Views&nbsp;&nbsp;
+                      <span class="position-relative top-50 start-300 translate-middle badge rounded-pill bg-danger">
+                        <script>
+                          sessionStorage.setItem("init", 2290)
+                          sessionStorage.setItem("IprofView",sessionStorage.getItem("IprofView")?sessionStorage.getItem("IprofView") : (parseInt(sessionStorage.getItem("init")) + Math.floor(Math.random()*10)));
+                          document.write(sessionStorage.getItem("IprofView"));
+                          const count =sessionStorage.getItem("IprofView");
+                          </script>
+
+                      </span>
+                    </a>
+
+    <!--                    https://www.youtube.com/watch?v=XkLyX2CT1Ro-->
+
+                  </li>
+<!--                  <button type="button" class="btn btn-primary position-relative">-->
+<!--                  Profile-->
+<!--                  <span class="position-absolute top-50 start-100 translate-middle p-1  border border-5 border-light rounded-pill">-->
+<!--                    <span class="visually-hidden">&nbsp;{{1}}&nbsp;</span>-->
+<!--                  </span>-->
+<!--                </button>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="">Log Out</a>-->
+<!--                </li>-->
+
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+
+
+
+
+        <!-- content down -->
+<link rel="stylesheet" href="/static/css/Vis_gallery.css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<div class="row">
+    <style>
+        #product1 .pro-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+
+
+}
+
+#product1 .pro {
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 2px solid #F5F5DC;
+    border-radius: 25px;
+    transition: .2s;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    margin: 15px 0;
+
+}
+
+#product1 .pro:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.08);
+    transition: 500ms;
+    transform: translateY(-20px);
+    border: 2px solid #0b5274;
+}
+
+#product1 .pro img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+
+#product1 .pro .des span {
+    color: #606063;
+    font-size: 12px;
+}
+
+
+
+
+
+#product1 .pro .des i {
+    color: rgb(240, 177, 18);
+    font-size: 12px;
+}
+
+
+
+#product1 .pro .cart {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+
+    font-weight: 500;
+    color:  #9fcdff;
+
+    transition: 0.2s;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+}
+
+#product1 .pro .cart:hover  {
+    color:#297b75;
+    background: white;
+    font-weight: 400;
+}
+
+    </style>
+	<div class="col-md-6">
+		<h2 style="font-family: cinzel;">Gallery</h2>
+	</div>
+	<div class="col-md-6 "  style="text-align:right; ">
+		<a href="https://www.credly.com/users/abhishek-singh.0e181c82/badges" style="text-decoration: none;color: #1A5276; font-style: italic; font-weight: bold;"><img src="/static/images/credly.svg" style="color: #c97c59;" width="15%"alt=""> Verified<sup>*</sup></sup></a>
+	</div>
+<div>
+	
+</div>	
+	
+</div>
+					<div id="main">
+
+						<!-- Post -->
+
+
+								<!-- Text stuff -->
+									<h2 style="font-family: cinzel;"><i class="fa-solid fa-certificate"></i>&nbsp;Badges Earned </h2>
+									<p>Badges earned by completing the courses from IBM, Coursera, Linkedin Leading, and DataCamp.</p>
+									<hr />
+
+
+								<!-- Image -->
+
+
+
+
+
+       <section id="product1" class="section-p1">
+        <h2></h2>
+        <p></p>
+        <div class="pro-container">
+
+
+
+         <div class="pro">
+                <img src="https://images.credly.com/size/680x680/images/d7c2b294-d08e-4795-a342-88fc34df7e01/image.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <br>
+                <a href="https://www.credly.com/badges/7cb885e1-46b1-4b25-91b7-d5e8e8d99970"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+         <div class="pro">
+                <img src="https://images.credly.com/size/680x680/images/08216781-93cb-4ba1-8110-8eb3401fa8ce/Docker_Essentials_-_ISDN.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <br>
+                <a href="https://www.credly.com/badges/4669927a-cad7-459f-bbcd-3af6533511f7"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+
+
+            <div class="pro">
+                <img src="/static/images/Advi_Data_Science_Specialization.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <br>
+                <a href="https://www.credly.com/badges/218aa725-4800-4640-a1b8-58defc27d3b5"><i class='fal bx bxs-info-circle cart fa-2x' style=''  title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Applied_Data_Science_Capstone.png" alt="">
+                <div class="des">
+
+                </div>
+                <a href="https://www.credly.com/badges/98e86753-dc32-41c1-bd5a-52064a0958f6"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Deep_Learning_Essentials.png" alt="">
+                <div class="des">
+
+                </div>
+                <a href="https://www.credly.com/badges/b736090b-fd5c-4323-98ee-60bec91198c2"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Applied_Data_Science_with_Python.png" alt="">
+                <div class="des">
+
+                </div>
+                <a href="https://www.credly.com/badges/a9bbaba9-8705-4905-9240-2249a996d46f"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Statistics_101_-_CC.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/cea8dad2-a867-44b8-aadb-9302285be12c"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Data_Sci_Foundations_Level_2_-_CC_-_2019.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/41d0a2a0-7107-482b-a5b8-8931fb19a63e"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Data_Sci_Found_Level_1_-_CC_-_2019.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/2f6dee6c-39ab-4ff4-810d-3035de8f837a"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Python_for_Data_Sci_and_AI_Foundational.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/2d6db8e0-8851-4c86-aa3a-225777dcb2cc"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+            <div class="pro">
+                <img src="/static/images/Data_Visualization_with_R.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/17a17f5a-d2f9-47b2-8c5c-f6ec77357967"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/Python_101_Data_Science.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/8f794539-e7d1-408e-8aaa-910f8ab1668d"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/Cognitive_Class_-_Data_Analysis_w_Python.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/383a18a6-85aa-4fc0-9d56-6e126fa17446"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/Data_Analysis_using_Python.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.credly.com/badges/31166686-cc5a-4f71-9478-cf74b228774c"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/I2CS__1_.png" alt="">
+                <div class="des">
+
+                </div>
+                <br><br><br>
+                <a href="https://www.credly.com/badges/00976637-14a2-44d0-88c4-51dd37bdc0dc"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+
+            <div class="pro">
+                <img src="/static/images/Cloud_Native_Sec_Conf_-_Data_Security.png" alt="">
+                <div class="des">
+
+                </div>
+                <br><br><br>
+
+                <a href="https://www.credly.com/badges/1241948f-0973-4615-845a-a92777ffef35"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+{#            <div class="pro">
+                <img src="/static/images/dsbdge.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <br>
+                <a href="https://www.datacamp.com/tracks/data-scientist-with-python"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+
+            <div class="pro">
+                <img src="/static/images/datacleaning.png" alt="">
+                <div class="des">
+
+                </div>
+                <br><br>
+                <a href="https://www.datacamp.com/courses/cleaning-data-in-r"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/dmr.png" alt="">
+                <div class="des">
+
+                </div>
+                <br><br>
+                <a href="https://www.datacamp.com/courses/data-manipulation-with-dplyr"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+            <div class="pro">
+                <img src="/static/images/dmimpot.png" alt="">
+                <div class="des">
+
+                </div>
+                <br>
+                <a href="https://www.datacamp.com/courses/introduction-to-importing-data-in-r"><i class='fal bx bxs-info-circle cart fa-2x'   title="More info" ></i></a>
+            </div>
+
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/static/js/Vis_gallery.js"></script>
+
+
+
+
+
+
+
+
+<br><br>
+
+<button onclick="topFunction()" id="myBtn" class="change" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
+<Script>
+
+      // Get the button:
+  let mybutton = document.getElementById("myBtn");
+
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  }
+
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+</Script>
+
+
+
+<div class="container">
+ <div class="d-flex justify-content-around" style="margin-right:10% ;">
+           <div id="copyright col-md-8 " style="position: fixed;
+
+left: 0;
+bottom: 0;
+border-top: solid rgba(255,255,255,1);
+box-shadow: 3px 4px 5 px 6px #fffff   ;
+
+width: 100%;color:#C97C59; text-align: center; text-decoration:none; background-color: #012a3e;">
+
+        <div class="  container-fluid"><br>
+        <a href="https://www.google.com/search?q=United+Kingdom"style="color:lightgrey ;text-decoration:none; ;"><i class="fa-solid fa-map-pin fa-xl ">&nbsp;</i>United Kingdom</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="Mailto:sighabh@gmail.com"style="color:lightgrey; text-decoration:none;  "><i class="fa-solid fa-envelope-circle-check fa-xl" >&nbsp;</i>sighabh@gmail.com</a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/AbsTheAnalyst" style="color:white"><i class="fa-brands fa-github fa-xl ">&nbsp;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" style="color:white"><i class="fa-brands fa-linkedin fa-xl">&nbsp;</i></a>
+
+       &nbsp;&nbsp;&nbsp;<l style="font-family: cinzel;">Designed By: <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"></a></l> <l style="font-family: centzel;">Abhishek Singh&nbsp;&nbsp;<i class="fa-solid fa-copyright fa-lg fa-beat" style="--fa-animation-duration: 2s;">&nbsp;</i> </l>
+
+        </div>
+        <br>
+    </div>
+     </div>
+</div>
+
+<script src="https://kit.fontawesome.com/a60f39abb1.js" crossorigin="anonymous"></script>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/popper.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>

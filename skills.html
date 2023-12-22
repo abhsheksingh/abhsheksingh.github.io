@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ABS-Abhishek Singh | Data Scientist | Liverpool | United Kingdom</title>
+    <meta name="description" content="Portfolio website of ABS">
+    <meta name="keywords" content="Data, Data Scientist, Web Developer">
+    
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/icon.png') }}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="../static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+
+  <div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" class="active">
+
+                    <!-- Logo Below -->
+                        <?xml version="1.0" encoding="utf-8"?>
+                        <svg  class ="mCircle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: left;  display: block; shape-rendering: auto;" width="100px" height="100px" >
+                                <g transform="translate(50 50)">
+                                <g transform="scale(0.5)">
+                                <g transform="translate(-50 -50)">
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="0.7575757575757576s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#F5F5F5" d="M50 50L50 0A50 50 0 0 1 100 50Z"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.0101010101010102s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#01395C" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(90 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="1.5151515151515151s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#007eb6" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(180 50 50)"></path>
+                                    </g>
+                                    <g>
+                                    <animateTransform attributeName="transform" type="rotate" repeatCount="indefinite" values="0 50 50;360 50 50" keyTimes="0;1" dur="3.0303030303030303s"></animateTransform>
+                                    <path fill-opacity="0.8" fill="#0067A1" d="M50 50L50 0A50 50 0 0 1 100 50Z" transform="rotate(270 50 50)"></path>
+                                </g>
+                                </g>
+                                </g>
+                                </g>
+                                <svg viewBox="0 0 380 100" xmlns="http://www.w3.org/2000/svg">
+                                    <style>
+
+                                    .heavy { font: normal 40px cinzel ;fill: rgb(247, 246, 245) }
+
+                                    </style>
+
+                                    <text x="140" y="200" class="heavy">A-b-s</text>
+
+                                </svg>
+                        </svg>
+                <!-- Logo Above -->
+
+                    <ul class="list-unstyled components mb-5" >
+<!--                        style="color:lightgrey ;"-->
+                      <br>
+                      <li class="active" title="Skills" data-bs-toggle="tooltip" data-bs-placement="right">
+                        <a href="skills.html" style="text-decoration: none; "aria-label="Skills" ><span class="fa-solid fa-keyboard" aria-hidden="true"></span>Skills</a>
+                      </li>             <!-- style="color:#ED8758;" -->
+                      <li>
+                          <a href="experience.html" style="text-decoration: none;" aria-label="Experience"><span class="fa-solid fa-person-digging"></span>Experience</a>
+                      </li>
+                      <!-- <i class="fa-solid fa-person-digging"></i> -->
+                      <li>
+                        <a href="education.html" style="text-decoration: none;" aria-label="Education" ><span class="fa-brands fa-odnoklassniki"></span>Education</a>
+                      </li>
+                      <li>
+                        <a href="certificates.html" style="text-decoration: none;" aria-label="Certificates"><span class="fa-solid fa-ribbon" ></span>Certificates</a>
+                      </li>
+
+                      <li>
+
+                        <a href="gallery.html" style="text-decoration: none;" aria-label="Gallery"><span class="fa-solid fa-clover"></span>Gallery</a>
+                      </li>
+
+                      <li>
+                          <a href="resume.html" style="text-decoration: none;" aria-label="Resume"><span class="fa-solid fa-address-card"><sup><i class="fa-solid fa-circle-down fa-2xs" style="color:limegreen;"></i></sup></span>CV</a>
+                      </li>
+
+                      <!-- <i class="fa-solid fa-arrows-spin"></i> -->
+<!--  -->
+                      <!-- <i class="fa-solid fa-universal-access"></i> -->
+
+                    </ul>
+
+                    <div class="footer">
+                        <p>
+                                  Copyright &copy;&nbsp;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                                </p>
+                    </div>
+    	</nav>
+
+
+        <!-- Page Content  -->
+      <div id="content" class="p-4 p-md-5">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+
+            <button type="button" id="sidebarCollapse" class="btn btn-dark">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+            <button class="btn btn-dark d-inline-block d-lg-none ml-auto"  style="color:white;" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars" ></i>
+            </button>&nbsp;&nbsp;<h3>Abhishek Singh</h3>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://github.com/AbsTheAnalyst"><i class="fa-brands fa-github fa-xl "></i>&nbsp;github</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"><i class="fa-brands fa-linkedin fa-xl"></i>&nbsp;linkedin</a>
+                </li>
+                  <li class="nav-item active">
+                    <a class="nav-link ">
+                      <i class="fa-solid fa-eye fa-xl"  class="badge bg-secondary position-relative">&nbsp;</i>Profile Views&nbsp;&nbsp;
+                      <span class="position-relative top-50 start-300 translate-middle badge rounded-pill bg-danger">
+                        <script>
+                          sessionStorage.setItem("init", 2290)
+                          sessionStorage.setItem("IprofView",sessionStorage.getItem("IprofView")?sessionStorage.getItem("IprofView") : (parseInt(sessionStorage.getItem("init")) + Math.floor(Math.random()*10)));
+                          document.write(sessionStorage.getItem("IprofView"));
+                          const count =sessionStorage.getItem("IprofView");
+                          </script>
+
+                      </span>
+                    </a>
+
+    <!--                    https://www.youtube.com/watch?v=XkLyX2CT1Ro-->
+
+                  </li>
+<!--                  <button type="button" class="btn btn-primary position-relative">-->
+<!--                  Profile-->
+<!--                  <span class="position-absolute top-50 start-100 translate-middle p-1  border border-5 border-light rounded-pill">-->
+<!--                    <span class="visually-hidden">&nbsp;{{1}}&nbsp;</span>-->
+<!--                  </span>-->
+<!--                </button>-->
+<!--                <li class="nav-item">-->
+<!--                    <a class="nav-link" href="">Log Out</a>-->
+<!--                </li>-->
+
+                </ul>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<h2 style="font-family: cinzel;">Skills</h2>
+<br>
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+		<link rel="stylesheet" href="/static/css/Vis_gallery.css" />
+
+
+					<div >
+
+								<h3 style="font-family: cinzel;"><i class="fa-solid fa-layer-group fa-xm" style="color:#1A5276;">
+
+
+								</i>&nbsp;Projects</h3>
+
+								<a href="https://recommender.info-abs-datascientist.net/" style="text-decoration: none; color:#e83e8c;"><li > Content-Based Movie Recommender system <b>(07/2022)</b><sub>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-link"></i></sub></a><sub>&nbsp;&nbsp;<a href="https://github.com/AbsTheAnalyst/movie-recommender-content-based-" class="fa-brands fa-github"></a></sub></li>
+
+								<li> MSc Project-Credit card risk prediction using artificial neural
+									network <b>(06/2021 - 09/2021)</b></li>
+
+								<a href="https://workcupres.gitbook.io/data-science-projects/#data-science-projects" style="text-decoration: none; color:#e83e8c;"><li> Predicting stock performance with machine learning <b>(01/2021-04/2021)</b><sub>&nbsp;&nbsp;&nbsp;<i class="fa-solid fa-link"></i></sub></a></li>
+						<br><BR>
+
+						<center><h3 style="font-family: cinzel;">Knowledge</h3></center>
+
+	          <div class="row">
+						<div class="col-sm-6">
+						<h4 style="font-family: cinzel;"><span class="material-symbols-outlined fa-xm" style="color:#1A5276;">
+									data_exploration
+									<!-- bubble_chart -->
+									</span>&nbsp;Data Analytics tools</h4>
+							<ul>
+								<li>Microsoft Excel</li>
+								<li>Power BI</li>
+								<li>Power Query</li>
+								<li>SQL Workbench</li>
+							</ul>
+								</div>
+				  <div class="col-sm-6">
+
+						<h4 style="font-family: cinzel;"><i class="fa-solid fa-cog fa-spin fa-xm" style="color:#1A5276;"></i><i class="fa-solid fa-cog fa-spin fa-beat fa-xm" style="--fa-animation-direction: reverse; opacity: 0.5;" ></i>&nbsp;Machine Learning Algorithms</h4>
+							<ul>
+								<li>Neural networks</li>
+								<li>Linear regression</li>
+								<li>Logistic regression</li>
+								<li>k-means clustering</li>
+							</ul>
+							</div>
+			  </div>
+								<BR>
+
+								<h4 style="font-family: cinzel;"><i class="fa-brands fa-python  fa-xm" style="color:#1A5276;">&nbsp;</i>Python Data Stack knowledge </h4>
+
+						<ul><h6>for Analytics/Machine learning/ Data Science</h6></ul>
+						<div class="row">
+  <div class="col-sm">
+	  <ul>
+		  <li>Pandas</li>
+		  <li>Numpy</li>
+		  <li>Keras</li>
+	  </ul>
+	  </div>
+  <div class="col-sm">
+	  <ul><li>Scipy</li>
+		  <li>MatPlotLib</li>
+	  </ul>
+  </div>
+  <div class="col-sm">
+	  <ul><li>Scikit-learn</li>
+		  <li>TensorFlow</li>
+	  </ul>
+  </div>
+</div>
+
+
+
+
+
+						<br>
+              <div class="row">
+						<div class="col-sm-6">
+						<h4 style="font-family: cinzel;"><i class="fa-solid fa-share-nodes fa-xm" style="color:#1A5276;">&nbsp;</i>Usage of API and Endpoints</h4>
+				<ul>
+						<li>For Data Consumption</li>
+						<li>For Data Plotting</li>
+						<li>For Data Acquisition</li>
+						<li>For Providing Service points</li>
+					</ul>
+						</div>
+
+						<div class="col-sm-6" STYLE="font-size:16px;">
+							<h4 style="font-family: cinzel;"><i class="fab fa fa-aws  fa-xm" style="color:#1A5276;">&nbsp;</i>Knowledge of AWS Services </h4>
+									<ul>
+										<li>S3</li>
+										<li>SageMaker</li>
+										<li>EC2</li>
+										<li>Athena</li>
+										<li>AWS Cloud Practitioner (preparing for exam )</li>
+									</ul>
+						</div>
+			  </div>
+						<BR>
+
+								<BR>
+								<h4 style="font-family: cinzel;"><i class="fa-solid fa-keyboard  fa-xl" style="color:#1A5276"></i>&nbsp;DevOps Technology Skills </h4>
+										<div class="row">
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" title="Experience in linux system administration/ command line">
+			  <i class="fa-brands fa-ubuntu fa-2x ">&nbsp; </i>Linux/Unix System
+		  </div>
+	  </ul>
+	  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" title="Knowledge of good security practices and experience in security configuration">
+			  <i class="fa-solid fa-shield fa-2x">&nbsp; </i>Security Configuration
+		  </div>
+	  </ul>
+  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" title="Experience spinning docker container services">
+			  <i class="fa-brands fa-docker fa-2x">&nbsp; </i>Docker
+		  </div>
+	  </ul>
+  </div>
+</div>
+<div class="row">
+
+	  <div class="col-sm">
+		  <ul>
+			  <div class="col-sm" title="Good understanding of Virtual Private Cloud" >
+				  <i class="fa-solid fa-cloud fa-2x" ></i> VPC
+			  </div>
+		  </ul>
+		  </div>
+  <div class="col-sm">
+	  <ul>
+		<div class="col-sm">
+		  <i class="fa-solid fa-database fa-2x" title="Spinning Databases,Configured them, and Maintained them">&nbsp;</i> Database Administration
+		</div>
+	  </ul>
+  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm">
+			  <i class="fa-solid fa-i-cursor fa-2x" title="Experience with terminal based text editors">&nbsp;&nbsp;</i>Vim, Nano(text editor)
+		  </div>
+	  </ul>
+  </div>
+</div>
+
+								<BR>
+									<BR>
+								<h4 style="font-family: cinzel;"><i class="fa-solid fa-code  fa-xl" style="color:#1A5276;"></i>&nbsp;Knowledge of Programming Language </h4>
+
+													<div class="row">
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" >
+			  <div class="skills tooltip1" title="Python 75%" >
+						<i class="fab fa-python fa-xl">&nbsp;</i><progress id="file" value="75" max="100"> 32% </progress>
+						<span class="tooltiptext1 " >Python</span>
+				  </div>
+		  </div>
+	  </ul>
+	  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" >
+			  <div class="skills tooltip1" title="JavaScript 75%">
+							<i class="fab fa-js-square fa-xl">&nbsp;</i><progress id="file" value="75" max="100"> 32% </progress>
+							<span class="tooltiptext1 " >JavaScript</span>
+			  </div>
+		  </div>
+	  </ul>
+  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm" >
+			  <div class="skills tooltip1" title="PHP 68%">
+											<i class="fa-brands fa-php fa-xl" >&nbsp;</i><progress id="file" value="68" max="100"> 32% </progress>
+											<span class="tooltiptext1 " >PHP</span>
+				</div>
+		  </div>
+	  </ul>
+  </div>
+</div>
+<div class="row">
+
+	  <div class="col-sm">
+		  <ul>
+			  <div class="col-sm" >
+				  <div class="skills tooltip1" title="HTML5 95%">
+											<i class="fa-brands fa-html5 fa-xl">&nbsp;</i><progress id="file" value="95" max="100"> 32% </progress>
+											<span class="tooltiptext1 " >HTML5</span>
+				  </div>
+			  </div>
+		  </ul>
+		  </div>
+  <div class="col-sm">
+	  <ul>
+		<div class="col-sm">
+			<div class="skills tooltip1" title="CSS3 68%">
+												<i class="fa-brands fa-css3-alt fa-xl">&nbsp;</i><progress id="file" value="68" max="100"> 32% </progress><span class="tooltiptext1 " >CSS3</span>
+			</div>
+
+		</div>
+	  </ul>
+  </div>
+  <div class="col-sm">
+	  <ul>
+		  <div class="col-sm">
+			  <div class="skills tooltip1" title="MySQL 70%" style="color:#1A5276; font-family: cinzel;">
+<!--				  <img src="\static\images\mysql.svg" width="8%" height="12%">&nbsp;&nbsp;-->
+					<i class="fa-solid fa-database fa-xl"></i>
+
+											<progress id="file" value="70" max="100"> 70% </progress>
+											<span class="tooltiptext1 " >MySQL</span>
+
+			  </div>
+		  </div>
+	  </ul>
+  </div>
+</div>
+	<!-- <b>SQ</b>&nbsp;&nbsp;&nbsp; -->
+								<BR>
+								<p>
+								<h4 style="font-family: cinzel;">List of Projects</h4>
+								<p>
+								<b>Data Science Projects</b><br>
+								<i class="fa-brands fa-bitcoin fa-2xl fa-beat">&nbsp;&nbsp;&nbsp;</i><a href="https://workcupres.gitbook.io/data-science-projects/#data-science-projects">Predicting Stock Performance with Machine Learning</a><br ><br>
+								 <span class="fa-stack fa-xs">
+									<i class="fa-regular fa-credit-card fa-stack-2x fa-beat "></i>
+									<i class="fa-solid fa-ban fa-stack-1x " style="color:rgb(225, 62, 34)"></i>
+								</span>
+								&nbsp;&nbsp;&nbsp;&nbsp;
+								<a href="https://workcupres.gitbook.io/data-science-projects/#data-science-projects">Working on Credit Card Fraud Prediction using Machine Learning and Artificial Intelligence</a></p>
+								<p><a href="https://workcupres.gitbook.io/data-science-projects/#big-biological-data-projects"></a><b>BIG-Biological Data Projects</b><br />
+								<a href="https://workcupres.gitbook.io/data-science-projects/#big-biological-data-projects">1. Rheumatoid Arthritis---Data Analysis using GWAScat</a><br />
+								<a href="https://workcupres.gitbook.io/data-science-projects/#big-biological-data-projects">2. Plotting of Biological Data on the World Map </a></p>
+									<Br>
+										<BR><h2 align="center" style="font-family: cinzel;">Data Visualisation Gallery</h2>
+
+										<div class="row">
+										<div class="column">
+											<img src="/static/images/Wmap_RA_GB.png" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+										</div>
+										<div class="column">
+											<img src="/static/images/FUll_Final.png" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+										</div>
+										<div class="column">
+											<img src="/static/images/HD_main_Final.png" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+										</div>
+										<div class="column">
+											<img src="/static/images/CVD_DIST.svg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+										</div>
+										<div class="column">
+											<img src="/static/images/g11626.png" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+										</div>
+										<div class="column">
+											<img src="/static/images/400_1020-1.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+										</div>
+										</div>
+				<div id="myModal" class="modal">
+										<span class="close cursor" onclick="closeModal()">&times;</span>
+								<div class="modal-content">
+
+											<div class="mySlides">
+											<div class="numbertext">1 / 6</div>
+											<img src="/static/images/Wmap_RA_GB.png" style="width:100%">
+											</div>
+
+											<div class="mySlides">
+											<div class="numbertext">2 / 6</div>
+											<img src="/static/images/FUll_Final.png" style="width:100%">
+											</div>
+
+											<div class="mySlides">
+											<div class="numbertext">3 / 6</div>
+											<img src="/static/images/HD_main_Final.png" style="width:100%">
+											</div>
+
+											<div class="mySlides">
+											<div class="numbertext">4 / 6</div>
+											<img src="/static/images/CVD_DIST.svg" style="width:100%">
+											</div>
+
+											<div class="mySlides">
+												<div class="numbertext">5 / 6</div>
+												<img src="/static/images/g11626.png" style="width:100%">
+											</div>
+
+											<div class="mySlides">
+												<div class="numbertext">6 / 6</div>
+												<img src="/static/images/400_1020-1.jpg" style="width:100%">
+											</div>
+
+											<a class="prev" onclick="plusSlides(-1)">&#10096;</a>
+											<a class="next" onclick="plusSlides(1)">&#10097;</a>
+
+											<div class="caption-container">
+											<p id="caption"></p>
+											</div>
+
+
+											<div class="column">
+											<img class="demo cursor" src="/static/images/Wmap_RA_GB.png" style="width:100%" onclick="currentSlide(1)" alt="World Density Map">
+											</div>
+											<div class="column">
+											<img class="demo cursor" src="/static/images/FUll_Final.png" style="width:100%" onclick="currentSlide(2)" alt="Chord Plot by using R programming language">
+											</div>
+											<div class="column">
+											<img class="demo cursor" src="/static/images/HD_main_Final.png" style="width:100%" onclick="currentSlide(3)" alt="Chord Plot by using R programming language">
+											</div>
+											<div class="column">
+											<img class="demo cursor" src="/static/images/CVD_DIST.svg" style="width:100%" onclick="currentSlide(4)" alt="CVD plot using PowerBI">
+											</div>
+											<div class="column">
+											<img class="demo cursor" src="/static/images/g11626.png" style="width:100%" onclick="currentSlide(5)" alt="Plot by using PowerBI">
+											</div>
+											<div class="column">
+											<img class="demo cursor" src="/static/images/400_1020-1.jpg" style="width:100%" onclick="currentSlide(6)" alt="Chord Plot by using PowerBI">
+											</div>
+								</div>
+							</div>
+										<br>
+
+
+		</div>
+			<!-- Footer -->
+			<br><br>
+
+			<button onclick="topFunction()" id="myBtn" class="change" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+	  
+	  <Script>
+	  
+				  // Get the button:
+			  let mybutton = document.getElementById("myBtn");
+	  
+			  // When the user scrolls down 20px from the top of the document, show the button
+			  window.onscroll = function() {scrollFunction()};
+	  
+			  function scrollFunction() {
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				  mybutton.style.display = "block";
+				} else {
+				  mybutton.style.display = "none";
+				}
+			  }
+	  
+			  // When the user clicks on the button, scroll to the top of the document
+			  function topFunction() {
+				document.body.scrollTop = 0; // For Safari
+				document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+			  }
+	  </Script>
+	  
+	  
+	  
+		 <div class="container">
+			 <div class="d-flex justify-content-around" style="margin-right:10% ;">
+					   <div id="copyright col-md-8 " style="position: fixed;left: 0;bottom: 0;  border-top: solid rgba(255,255,255,1); box-shadow: 3px 4px 5 px 6px #fffff; width: 100%;color:#C97C59; text-align: center; text-decoration:none; background-color: #012a3e;">
+	  
+					<div class="  container-fluid"><br>
+					<a href="https://www.google.com/search?q=United+Kingdom"style="color:lightgrey ;text-decoration:none; ;"><i class="fa-solid fa-map-pin fa-xl ">&nbsp;</i>United Kingdom</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="Mailto:sighabh@gmail.com"style="color:lightgrey; text-decoration:none;  "><i class="fa-solid fa-envelope-circle-check fa-xl" >&nbsp;</i>sighabh@gmail.com</a>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://github.com/AbsTheAnalyst" style="color:white"><i class="fa-brands fa-github fa-xl ">&nbsp;</i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" style="color:white"><i class="fa-brands fa-linkedin fa-xl">&nbsp;</i></a>
+	  
+				   &nbsp;&nbsp;&nbsp;<l style="font-family: cinzel;">Designed By: <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/"></a></l> <l style="font-family: centzel;">Abhishek Singh&nbsp;&nbsp;<i class="fa-solid fa-copyright fa-lg fa-beat" style="--fa-animation-duration: 2s;">&nbsp;</i> </l>
+	  
+					</div>
+					<br>
+				</div>
+				 </div>
+		 </div>
+        <!-- Scripts -->
+
+<!--		<script src="https://kit.fontawesome.com/a60f39abb1.js" crossorigin="anonymous"></script>-->
+
+		<script src="/static/js/Vis_gallery.js" type="text/javascript"></script>
+<!--        <script src="/static/js/netsvg.js" type="text/javascript"></script>-->
+<!--		<script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js" type="text/javascript"></script>-->
+
+
+
+
+<script src="https://kit.fontawesome.com/a60f39abb1.js" crossorigin="anonymous"></script>
+<script src="../static/js/jquery.min.js"></script>
+<script src="../static/js/popper.js"></script>
+<script src="../static/js/bootstrap.min.js"></script>
+<script src="../static/js/main.js"></script>
+</body>
+</html>
