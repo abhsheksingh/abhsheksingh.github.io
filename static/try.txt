@@ -1,0 +1,21 @@
+let
+    // Load all sheets
+    Source = Excel.Workbook(File.Contents("C:\Path\To\Your\File.xlsx"), true),
+    Sheets = Table.SelectColumns(Source, {"Name", "Data"}),
+    
+    // Expand and clean each sheet
+    AddCustom = Table.AddColumn(Sheets, "Cleaned", each
+        let
+            SheetData = [Data],
+            // Promote first row as header (if only one header row)
+            Promoted = Table.PromoteHeaders(SheetData, [PromoteAllScalars=true]),
+            // Add sheet name column
+            AddSource = Table.AddColumn(Promoted, "Source_Sheet", each [Name])
+        in
+            AddSource
+    ),
+    
+    // Combine all into one table
+    Combined = Table.Combine(AddCustom[Cleaned])
+in
+    Combined
