@@ -1,19 +1,17 @@
 name: Generate Repo Graph
 
 on:
-  pull_request_target:
+  pull_request:
     types: [opened, synchronize]
 
 jobs:
   render-graph:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout PR branch
+    - name: Checkout pull request branch
       uses: actions/checkout@v4
       with:
-        ref: ${{ github.event.pull_request.head.ref }}
-        repository: ${{ github.event.pull_request.head.repo.full_name }}
+        ref: ${{ github.head_ref }}
 
     - name: Setup Node
       uses: actions/setup-node@v4
@@ -37,13 +35,12 @@ jobs:
       run: node .github/generate/render_graph.mjs
 
     - name: Update README with new diagram
-      if: github.event.pull_request.head.repo.full_name == github.repository
       run: |
         sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](.github/generate/workflow_diagram.png)' README.md
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
         git add README.md .github/generate/workflow_diagram.png
         git commit -m "Auto-update repo structure diagram" || echo "No changes"
-        git push origin HEAD:${{ github.event.pull_request.head.ref }}
+        git push origin HEAD:${{ github.head_ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
