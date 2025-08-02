@@ -10,7 +10,8 @@ jobs:
     - name: Checkout pull request branch
       uses: actions/checkout@v4
       with:
-        ref: ${{ github.head_ref }}
+        ref: ${{ github.event.pull_request.head.ref }}
+        repository: ${{ github.event.pull_request.head.repo.full_name }}
 
     - name: Setup Node
       uses: actions/setup-node@v4
@@ -34,12 +35,13 @@ jobs:
       run: node .github/generate/render_graph.mjs
 
     - name: Update README with new diagram
+      if: github.event.pull_request.head.repo.full_name == github.repository
       run: |
         sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](.github/generate/workflow_diagram.png)' README.md
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
         git add README.md .github/generate/workflow_diagram.png
         git commit -m "Auto-update repo structure diagram" || echo "No changes"
-        git push origin HEAD:${{ github.head_ref }}
+        git push origin HEAD:${{ github.event.pull_request.head.ref }}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
