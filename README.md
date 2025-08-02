@@ -3,5 +3,7 @@ Profile page
 
 ## 📊 Diagram
 
+## 📊 Diagram
+
 <!-- diagram -->
-![Repo Structure](workflow_diagram.png)
+![Repo Structure](.github/generate/workflow_diagram.png)
