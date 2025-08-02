@@ -45,5 +45,6 @@ jobs:
         git config --global user.email github-actions@github.com
         git add README.md .github/generate/workflow_diagram.png
         git commit -m "Auto-update repo structure diagram" || echo "No changes"
+        git remote set-url origin https://x-access-token:${REPO_PUSH_TOKEN}@github.com/${{ github.repository }}
         git push origin HEAD:${{ github.event.pull_request.head.ref }}
 
