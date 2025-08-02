@@ -1,0 +1,42 @@
+name: Generate Repo Graph
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  render-graph:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+        node-version: 20
+
+    - name: Install deps
+      run: |
+        npm install js-yaml puppeteer
+        cd workflow-graph-app && npm install && npm run build
+
+    - name: Generate repo graph JSON
+      run: node scripts/scan_repo.js
+
+    - name: Copy JSON into React app
+      run: cp workflow_graph.json workflow-graph-app/build/
+
+    - name: Render graph to image
+      run: node scripts/render_graph.mjs
+
+    - name: Update README image
+      run: |
+        sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](workflow_diagram.png)' README.md
+        git config --global user.name github-actions
+        git config --global user.email github-actions@github.com
+        git add README.md workflow_diagram.png
+        git commit -m "Update diagram from repo structure" || echo "No changes"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
