@@ -37,6 +37,8 @@ jobs:
 
     - name: Update README with new diagram
       if: github.event.pull_request.head.repo.full_name == github.repository
+      env:
+        REPO_PUSH_TOKEN: ${{ secrets.REPO_PUSH_TOKEN }}
       run: |
         sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](.github/generate/workflow_diagram.png)' README.md
         git config --global user.name github-actions
@@ -44,5 +46,4 @@ jobs:
         git add README.md .github/generate/workflow_diagram.png
         git commit -m "Auto-update repo structure diagram" || echo "No changes"
         git push origin HEAD:${{ github.event.pull_request.head.ref }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
