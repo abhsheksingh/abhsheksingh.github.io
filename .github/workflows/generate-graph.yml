@@ -16,27 +16,29 @@ jobs:
       with:
         node-version: 20
 
-    - name: Install deps
+    - name: Install dependencies
       run: |
-        npm install js-yaml puppeteer
-        cd workflow-graph-app && npm install && npm run build
+        npm install puppeteer
+        cd .github/generate/workflow-graph-app
+        npm install
+        npm run build
 
     - name: Generate repo graph JSON
-      run: node scripts/scan_repo.js
+      run: node .github/generate/scan_repo.js
 
     - name: Copy JSON into React app
-      run: cp workflow_graph.json workflow-graph-app/build/
+      run: cp .github/generate/workflow_graph.json .github/generate/workflow-graph-app/build/
 
     - name: Render graph to image
-      run: node scripts/render_graph.mjs
+      run: node .github/generate/render_graph.mjs
 
-    - name: Update README image
+    - name: Update README with new diagram
       run: |
-        sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](workflow_diagram.png)' README.md
+        sed -i '/<!-- diagram -->/!b;n;c\![Repo Structure](.github/generate/workflow_diagram.png)' README.md
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
-        git add README.md workflow_diagram.png
-        git commit -m "Update diagram from repo structure" || echo "No changes"
+        git add README.md .github/generate/workflow_diagram.png
+        git commit -m "Auto-update repo structure diagram" || echo "No changes"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
