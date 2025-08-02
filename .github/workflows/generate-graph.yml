@@ -8,8 +8,10 @@ jobs:
   render-graph:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout code
+    - name: Checkout pull request branch
       uses: actions/checkout@v4
+      with:
+        ref: ${{ github.head_ref }}
 
     - name: Setup Node
       uses: actions/setup-node@v4
