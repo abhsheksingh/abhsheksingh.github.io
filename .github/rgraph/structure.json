@@ -1,0 +1,119 @@
+{
+  "name": ".",
+  "children": [
+    {
+      "name": "README.md"
+    },
+    {
+      "name": "ast.txt"
+    },
+    {
+      "name": "certificates.html"
+    },
+    {
+      "name": "education.html"
+    },
+    {
+      "name": "experience.html"
+    },
+    {
+      "name": "gallery.html"
+    },
+    {
+      "name": "index.html"
+    },
+    {
+      "name": "resume.html"
+    },
+    {
+      "name": "skills.html"
+    },
+    {
+      "name": "static",
+      "children": [
+        {
+          "name": "css",
+          "children": [
+            {
+              "name": "Vis_gallery.css"
+            },
+            {
+              "name": "bootstrap",
+              "children": [
+                {
+                  "name": "_media.css"
+                },
+                {
+                  "name": "mixins",
+                  "children": [
+                    {
+                      "name": "_border-radius.css"
+                    },
+                    {
+                      "name": "_screen-reader.css"
+                    },
+                    {
+                      "name": "_visibility.css"
+                    }
+                  ]
+                },
+                {
+                  "name": "style.css"
+                },
+                {
+                  "name": "utilities",
+                  "children": [
+                    {
+                      "name": "_stretched-link.css"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "bootstrap.min.css"
+            },
+            {
+              "name": "demo.css"
+            },
+            {
+              "name": "style.css"
+            },
+            {
+              "name": "styles1.css"
+            }
+          ]
+        },
+        {
+          "name": "js",
+          "children": [
+            {
+              "name": "Vis_gallery.js"
+            },
+            {
+              "name": "anime.min.js"
+            },
+            {
+              "name": "bootstrap.min.js"
+            },
+            {
+              "name": "demo.js"
+            },
+            {
+              "name": "jquery.min.js"
+            },
+            {
+              "name": "main.js"
+            },
+            {
+              "name": "popper.js"
+            },
+            {
+              "name": "segment.min.js"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

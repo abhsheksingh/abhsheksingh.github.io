@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GitHub-like Repo Graph</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f6f8fa;
+    }
+
+    svg {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .link {
+      fill: none;
+      stroke: #d1d5da;
+      stroke-width: 2px;
+    }
+
+    .node-rect rect {
+      fill: #ffffff;
+      stroke: #d0d7de;
+      stroke-width: 1px;
+      rx: 6;
+      ry: 6;
+      width: 140px;
+      height: 40px;
+      filter: drop-shadow(0 1px 2px rgba(27, 31, 35, 0.04));
+    }
+
+    .junction-circle {
+      stroke: #d1d5da;
+      stroke-width: 1;
+      r: 5;
+    }
+
+    .node text {
+      font-size: 14px;
+      fill: #24292e;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <svg></svg>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const data = {"name":".","children":[{"name":"README.md"},{"name":"ast.txt"},{"name":"certificates.html"},{"name":"education.html"},{"name":"experience.html"},{"name":"gallery.html"},{"name":"index.html"},{"name":"resume.html"},{"name":"skills.html"},{"name":"static","children":[{"name":"css","children":[{"name":"Vis_gallery.css"},{"name":"bootstrap","children":[{"name":"_media.css"},{"name":"mixins","children":[{"name":"_border-radius.css"},{"name":"_screen-reader.css"},{"name":"_visibility.css"}]},{"name":"style.css"},{"name":"utilities","children":[{"name":"_stretched-link.css"}]}]},{"name":"bootstrap.min.css"},{"name":"demo.css"},{"name":"style.css"},{"name":"styles1.css"}]},{"name":"js","children":[{"name":"Vis_gallery.js"},{"name":"anime.min.js"},{"name":"bootstrap.min.js"},{"name":"demo.js"},{"name":"jquery.min.js"},{"name":"main.js"},{"name":"popper.js"},{"name":"segment.min.js"}]}]}]};
+
+    const svg = d3.select("svg"),
+          width = window.innerWidth,
+          height = window.innerHeight;
+
+    const root = d3.hierarchy(data);
+    const treeLayout = d3.tree().size([height - 100, width - 200]);
+    treeLayout(root);
+
+    const g = svg.append("g").attr("transform", "translate(100,50)");
+
+    // Links: from right edge of parent to left edge of child
+    const linkGenerator = d3.linkHorizontal()
+      .source(d => [
+        d.source.y + (d.source.depth === 0 ? 7 : 70), // root radius 7 or 70 for others
+        d.source.x
+      ])
+      .target(d => [
+        d.target.y - 70, // left side of card
+        d.target.x
+      ]);
+
+    g.selectAll(".link")
+      .data(root.links())
+      .join("path")
+      .attr("class", "link")
+      .attr("d", linkGenerator);
+
+    const nodes = g.selectAll(".node")
+      .data(root.descendants())
+      .join("g")
+      .attr("class", d => d.depth === 0 ? "node node-root" : "node node-rect")
+      .attr("transform", d => `translate(${d.y},${d.x})`);
+
+    // Root node: concentric circles with amber colors, aligned with links
+    const rootNode = nodes.filter(d => d.depth === 0);
+
+    rootNode.append("circle")
+      .attr("r", 7)
+      .attr("fill", "#dbab09");
+
+    rootNode.append("circle")
+      .attr("r", 3)
+      .attr("cx", 3)
+      .attr("cy", 0)
+      .attr("fill", "#f0c419");
+
+    // Root node text to the left of circles
+    rootNode.append("text")
+      .attr("x", -15)          // left side of circles
+      .attr("y", 4)
+      .attr("text-anchor", "end")  // right-aligned toward circles
+      .attr("fill", "#5c5c5c")
+      .text(d => d.data.name);
+
+    // Other nodes: cards with left junction circle
+    nodes.filter(d => d.depth !== 0)
+      .append("rect")
+      .attr("x", -70)
+      .attr("y", -20);
+
+    nodes.filter(d => d.depth !== 0)
+      .append("circle")
+      .attr("class", "junction-circle")
+      .attr("cx", -70)
+      .attr("cy", 0)
+      .attr("r", 5)
+      .attr("fill", d => d.data.name.endsWith(".py") ? "#2ea44f" : "#d1d5da");
+
+    // Other nodes text centered inside rectangles
+    nodes.filter(d => d.depth !== 0)
+      .append("text")
+      .attr("x", 0)
+      .attr("y", 4)
+      .attr("text-anchor", "middle")
+      .text(d => d.data.name);
+  </script>
+</body>
+</html>
