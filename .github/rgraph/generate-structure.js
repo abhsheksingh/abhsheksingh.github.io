@@ -7,7 +7,7 @@ function getStructure(dirPath) {
 
   if (fs.statSync(dirPath).isDirectory()) {
     item.children = fs.readdirSync(dirPath)
-      .filter(child => !['.git', 'node_modules', '.github', 'output.html', 'structure.json', 'structure.png', 'package-lock.json', 'package.json'].includes(child))
+      .filter(child => !['.git', 'node_modules', '.github', 'package-lock.json', 'package.json', 'static/images', 'static/pdf'].includes(child))
       .map(child => getStructure(path.join(dirPath, child)));
   }
 
