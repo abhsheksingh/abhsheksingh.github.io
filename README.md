@@ -1,6 +1,6 @@
 # portfolio
 Profile page
 
-## 📊 Repo structure 
+## 📊 Repository structure 
 <!-- STRUCTURE-GRAPH -->
 ![Structure](.github/rgraph/structure.png)
