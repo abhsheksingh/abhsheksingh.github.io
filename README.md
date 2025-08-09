@@ -1,10 +1,6 @@
 # portfolio
 Profile page
 
-## 📊 Diagram
-
-<!-- diagram -->
-![Repo Structure](.github/generate/workflow_diagram.png)
-
-
-hello
+## 📊 Repo structure 
+<!-- STRUCTURE-GRAPH -->
+![Structure](.github/rgraph/structure.png)
