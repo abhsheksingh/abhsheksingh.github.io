@@ -1,0 +1,133 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>GitHub-like Repo Graph</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: #f6f8fa;
+    }
+
+    svg {
+      width: 100%;
+      height: 100vh;
+    }
+
+    .link {
+      fill: none;
+      stroke: #d1d5da;
+      stroke-width: 2px;
+    }
+
+    .node-rect rect {
+      fill: #ffffff;
+      stroke: #d0d7de;
+      stroke-width: 1px;
+      rx: 6;
+      ry: 6;
+      width: 140px;
+      height: 40px;
+      filter: drop-shadow(0 1px 2px rgba(27, 31, 35, 0.04));
+    }
+
+    .junction-circle {
+      stroke: #d1d5da;
+      stroke-width: 1;
+      r: 5;
+    }
+
+    .node text {
+      font-size: 14px;
+      fill: #24292e;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body>
+  <svg></svg>
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script>
+    const data = {"name":".","children":[{"name":"README.md"},{"name":"certificates.html"},{"name":"education.html"},{"name":"experience.html"},{"name":"gallery.html"},{"name":"index.html"},{"name":"resume.html"},{"name":"skills.html"},{"name":"static","children":[{"name":"css","children":[{"name":"Vis_gallery.css"},{"name":"bootstrap","children":[{"name":"_media.css"},{"name":"mixins","children":[{"name":"_border-radius.css"},{"name":"_screen-reader.css"},{"name":"_visibility.css"}]},{"name":"style.css"},{"name":"utilities","children":[{"name":"_stretched-link.css"}]}]},{"name":"bootstrap.min.css"},{"name":"demo.css"},{"name":"style.css"},{"name":"styles1.css"}]},{"name":"images","children":[{"name":"24879589_1668271593236377_8617789494237532128_o.jpg"},{"name":"400_1020-1.jpg"},{"name":"Advi_Data_Science_Specialization.png"},{"name":"Applied_Data_Science_Capstone.png"},{"name":"Applied_Data_Science_with_Python.png"},{"name":"Badge.png"},{"name":"CVD_DIST.svg"},{"name":"Cloud_Native_Sec_Conf_-_Data_Security.png"},{"name":"Cognitive_Class_-_Data_Analysis_w_Python.png"},{"name":"Cognitive_Class_-_Data_Visual_w_Python.png"},{"name":"Data_Analysis_using_Python.png"},{"name":"Data_Sci_Found_Level_1_-_CC_-_2019.png"},{"name":"Data_Sci_Foundations_Level_2_-_CC_-_2019.png"},{"name":"Data_Visualization_Using_Python.png"},{"name":"Data_Visualization_with_R.png"},{"name":"Deep_Learning_Essentials.png"},{"name":"FUll_Final.png"},{"name":"HD_main_Final.png"},{"name":"I2CS__1_.png"},{"name":"LSOPal8d.jpg"},{"name":"OIP.jpg"},{"name":"Python_101_Data_Science.png"},{"name":"Python_for_Data_Sci_and_AI_Foundational.png"},{"name":"Statistics_101_-_CC.png"},{"name":"UNI.jpg"},{"name":"UNI2.svg"},{"name":"UNID.jpg"},{"name":"UNIP.jpg"},{"name":"Wmap_RA_GB.png"},{"name":"bar chart-1.1s-47px.svg"},{"name":"bg.jpg"},{"name":"bgsv.svg"},{"name":"cloud-native-security-conference-data-security.png"},{"name":"credly.svg"},{"name":"datacleaning.png"},{"name":"dmimpot.png"},{"name":"dmr.png"},{"name":"dsbdge.png"},{"name":"favicon.ico"},{"name":"g11626.png"},{"name":"icon.png"},{"name":"icon.svg"},{"name":"logo.svg"},{"name":"logom.svg"},{"name":"logomain.svg"},{"name":"mm2.png"},{"name":"mnbg.svg"},{"name":"mysql.svg"},{"name":"overlay.png"},{"name":"pic01.jpg"},{"name":"pic02.jpg"},{"name":"pic03.jpg"},{"name":"pic04.jpg"},{"name":"pic05.jpg"},{"name":"pic06.jpg"},{"name":"pic07.jpg"},{"name":"pic08.jpg"},{"name":"pic09.jpg"},{"name":"worldmap-thumb-1.jpg"},{"name":"worldmap-thumb.jpg"}]},{"name":"js","children":[{"name":"Vis_gallery.js"},{"name":"anime.min.js"},{"name":"bootstrap.min.js"},{"name":"demo.js"},{"name":"jquery.min.js"},{"name":"main.js"},{"name":"popper.js"},{"name":"segment.min.js"}]},{"name":"pdf","children":[{"name":"134_3_1458961_1664024650_AWS Course Completion Certificate.pdf"},{"name":"Aws_data_migration.pdf"},{"name":"CertificateOfCompletion_Excel Essential Training Office 365Microsoft 365 (1).pdf"},{"name":"CertificateOfCompletion_Excel Essential Training Office 365Microsoft 365.pdf"},{"name":"CertificateOfCompletion_Functional Programming with Python.pdf"},{"name":"CertificateOfCompletion_GDPR for Marketers.pdf"},{"name":"CertificateOfCompletion_Power BI Dashboards for Beginners.pdf"},{"name":"CertificateOfCompletion_Reinforcement Learning Foundations.pdf"},{"name":"CertificateOfCompletion_Understand GDPR and Data Privacy.pdf"},{"name":"CertificateOfCompletion_Using Public Health Data Sources (1).pdf"},{"name":"Cognitive Class DV0151EN Certificate _ Cognitive Class.pdf"},{"name":"CognitiveClass DA0101EN Certificate _ Cognitive Class.pdf"},{"name":"CognitiveClass DS0105EN Certificate _ Cognitive Class.pdf"},{"name":"Coursera 7D2L7F69PJNU.pdf"},{"name":"Coursera 8FECG5TQ67QR.pdf"},{"name":"Coursera B2RPNHH5AN4Z.pdf"},{"name":"Coursera BFWEAWE6F6HD.pdf"},{"name":"Coursera L9YP7Y9DN3RM.pdf"},{"name":"Coursera SABWN423SF7P.pdf"},{"name":"Ds-handson.pdf"},{"name":"IBM DS0103EN Certificate _ Cognitive Class.pdf"},{"name":"certificate_EDA.pdf"},{"name":"certificate_clean_r.pdf"},{"name":"certificate_corr_reg_r.pdf"},{"name":"certificate_inter_r.pdf"},{"name":"certificate_stat.pdf"},{"name":"certificate_tidyverse.pdf"}]},{"name":"try.txt"}]},{"name":"test.txt"}]};
+
+    const svg = d3.select("svg"),
+          width = window.innerWidth,
+          height = window.innerHeight;
+
+    const root = d3.hierarchy(data);
+    const treeLayout = d3.tree().size([height - 100, width - 200]);
+    treeLayout(root);
+
+    const g = svg.append("g").attr("transform", "translate(100,50)");
+
+    // Links: from right edge of parent to left edge of child
+    const linkGenerator = d3.linkHorizontal()
+      .source(d => [
+        d.source.y + (d.source.depth === 0 ? 7 : 70), // root radius 7 or 70 for others
+        d.source.x
+      ])
+      .target(d => [
+        d.target.y - 70, // left side of card
+        d.target.x
+      ]);
+
+    g.selectAll(".link")
+      .data(root.links())
+      .join("path")
+      .attr("class", "link")
+      .attr("d", linkGenerator);
+
+    const nodes = g.selectAll(".node")
+      .data(root.descendants())
+      .join("g")
+      .attr("class", d => d.depth === 0 ? "node node-root" : "node node-rect")
+      .attr("transform", d => `translate(${d.y},${d.x})`);
+
+    // Root node: concentric circles with amber colors, aligned with links
+    const rootNode = nodes.filter(d => d.depth === 0);
+
+    rootNode.append("circle")
+      .attr("r", 7)
+      .attr("fill", "#dbab09");
+
+    rootNode.append("circle")
+      .attr("r", 3)
+      .attr("cx", 3)
+      .attr("cy", 0)
+      .attr("fill", "#f0c419");
+
+    // Root node text to the left of circles
+    rootNode.append("text")
+      .attr("x", -15)          // left side of circles
+      .attr("y", 4)
+      .attr("text-anchor", "end")  // right-aligned toward circles
+      .attr("fill", "#5c5c5c")
+      .text(d => d.data.name);
+
+    // Other nodes: cards with left junction circle
+    nodes.filter(d => d.depth !== 0)
+      .append("rect")
+      .attr("x", -70)
+      .attr("y", -20);
+
+    nodes.filter(d => d.depth !== 0)
+      .append("circle")
+      .attr("class", "junction-circle")
+      .attr("cx", -70)
+      .attr("cy", 0)
+      .attr("r", 5)
+      .attr("fill", d => d.data.name.endsWith(".py") ? "#2ea44f" : "#d1d5da");
+
+    // Other nodes text centered inside rectangles
+    nodes.filter(d => d.depth !== 0)
+      .append("text")
+      .attr("x", 0)
+      .attr("y", 4)
+      .attr("text-anchor", "middle")
+      .text(d => d.data.name);
+  </script>
+</body>
+</html>
