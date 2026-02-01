@@ -1,0 +1,72 @@
+[
+  {
+    "category": "Programming",
+    "technologies": [
+      { "name": "PySpark", "icon": "icons/spark.svg", "link": "https://www.r-project.org/" },
+      { "name": "Python", "icon": "icons/python.svg", "link": "https://www.python.org/",
+          "children":[
+              { "name": "Flask", "icon": "icons/flask.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+              { "name": "Streamlit", "icon": "icons/streamlit.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+              { "name": "FastAPI", "icon": "icons/fastapi.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" },
+              { "name": "Django", "icon": "icons/django.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" }
+          ]
+  },
+      { "name": "SQL", "icon": "icons/sql.svg", "link": "https://www.php.net/" },
+      { "name": "JavaScript", "icon": "icons/javascript.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
+      { "name": "HTML | CSS", "icon": "icons/html.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" }
+    ]
+  },
+  {
+    "category": "Visualization",
+    "technologies": [
+      { "name": "Looker", "icon": "icons/looker.svg", "link": "https://looker.com/" },
+      { "name": "PowerBI", "icon": "icons/powerbi.svg", "link": "https://powerbi.microsoft.com/" },
+      { "name": "D3.js", "icon": "icons/d3.svg", "link": "https://d3js.org" }
+    ]
+  },
+  {
+    "category": "Database",
+    "technologies": [
+      { "name": "BigQuery", "icon": "icons/bigquery.svg", "link": "https://cloud.google.com/bigquery" },
+      { "name": "Athena", "icon": "icons/athena.svg", "link": "https://aws.amazon.com/athena/" },
+      { "name": "MySQL", "icon": "icons/mysql.svg", "link": "https://www.mysql.com/" },
+      { "name": "Postgres", "icon": "icons/postgres.svg", "link": "https://www.postgresql.org/" },
+      { "name": "RDS", "icon": "icons/rds.svg", "link": "https://aws.amazon.com/rds/" },
+      { "name": "MongoDB", "icon": "icons/mongodb.svg", "link": "https://www.mongodb.com/" }
+    ]
+  },
+  {
+    "category": "Data Tools",
+    "technologies": [
+      { "name": "sk-learn", "icon": "icons/scikit-learn.svg", "link": "https://scikit-learn.org/" },
+      { "name": "Pandas", "icon": "icons/pandas.svg", "link": "https://pandas.pydata.org/" },
+      { "name": "NumPy", "icon": "icons/numpy.svg", "link": "https://numpy.org/" },
+      { "name": "Jupyter", "icon": "icons/jupyter.svg", "link": "https://jupyter.org/" },
+      { "name": "PySpark", "icon": "icons/spark.svg", "link": "hhttps://pypi.org/project/pyspark/" },
+      { "name": "Airflow", "icon": "icons/airflow.svg", "link": "https://airflow.apache.org/" }
+    ]
+  },
+  {
+    "category": "Dev Ops",
+    "technologies": [
+      { "name": "Docker", "icon": "icons/docker.svg", "link": "https://www.docker.com/" },
+      { "name": "Git", "icon": "icons/git.svg", "link": "https://git-scm.com/" },
+      { "name": "Linux/Unix", "icon": "icons/linux.svg", "link": "https://www.linux.org/",
+       "children":[
+          { "name": "Vim", "icon": "icons/editor.svg", "link": "https://www.vim.org/" },
+          { "name": "Nano", "icon": "icons/editor.svg", "link": "https://www.nano-editor.org" }
+       ]
+      },
+      { "name": "Slack", "icon": "icons/slack.svg", "link": "https://slack.com/" },
+      {
+        "name": "Cloud", "icon": "icons/vpc.svg", "link": "https://aws.amazon.com/",
+        "children":[
+          { "name": "GCP", "icon": "icons/gcp.svg", "link": "https://cloud.google.com" },
+          { "name": "AWS", "icon": "icons/aws.svg", "link": "https://aws.amazon.com/" },
+          { "name": "VPC", "icon": "icons/vpc.svg", "link": "https://aws.amazon.com/vpc/" }
+        ]
+      },
+      { "name": "Security", "icon": "icons/security.svg", "link": "https://aws.amazon.com/security/" }
+    ]
+  }
+]

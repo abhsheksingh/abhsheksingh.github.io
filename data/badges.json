@@ -1,0 +1,184 @@
+[
+{
+"title": "Get Started with Pub/Sub Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Sep 23, 2025",
+"image": "https://images.credly.com/images/4b9b3bd9-02b8-4243-8def-893557125497/image.png",
+"link": "https://www.credly.com/badges/98581f78-d988-476f-aba3-681f7de111f0"
+},
+{
+"title": "Store, Process, and Manage Data on Google Cloud - Console Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Jul 24, 2025",
+"image": "https://images.credly.com/images/449ee94a-268c-4a6d-9983-0507fbdeaf46/image.png",
+"link": "https://www.credly.com/badges/325a7316-3d75-4beb-92bb-a56833a2c830"
+},
+{
+"title": "Derive Insights from BigQuery Data Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Dec 12, 2024",
+"image": "https://images.credly.com/images/11088b22-7be5-4fe3-995d-c014514c8dc3/image.png",
+"link": "https://www.credly.com/badges/f84297b2-deaa-4fb7-b546-6b3b58d3da43"
+},
+{
+"title": "Prepare Data for ML APIs on Google Cloud Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Dec 12, 2024",
+"image": "https://images.credly.com/images/68756311-9319-4eeb-a2b7-76defc8dd8a2/image.png",
+"link": "https://www.credly.com/badges/d7abc4aa-81c6-4ff7-8947-dd6df0eab9da"
+},
+{
+"title": "Share Data Using Google Data Cloud Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Dec 12, 2024",
+"image": "https://images.credly.com/images/b0e1da4e-e1c9-4201-9803-cf3389e1d0f9/image.png",
+"link": "https://www.credly.com/badges/ef5b1a2f-d1e0-4069-899c-af08e153e98c"
+},
+{
+"title": "Streaming Analytics into BigQuery Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Dec 12, 2024",
+"image": "https://images.credly.com/images/3934ff47-3ef9-40cb-82d2-66a40d33886a/image.png",
+"link": "https://www.credly.com/badges/4bc77505-9274-4de8-8b17-2c7f3100e1d3"
+},
+{
+"title": "Engineer Data for Predictive Modeling with BigQuery ML Skill Badge",
+"issuer": "Google Cloud",
+"issued": "Nov 13, 2024",
+"image": "https://images.credly.com/images/6160e2c1-4a95-4f47-8c5b-f2dde7bb6a67/image.png",
+"link": "https://www.credly.com/badges/101dbdc7-eedd-4c37-aec5-4ba4539b2876"
+},
+{
+"title": "Astronomer Certification for Apache Airflow 2 Fundamentals",
+"issuer": "Astronomer",
+"issued": "Apr 11, 2024",
+"image": "https://images.credly.com/images/655a478d-ecde-4a92-afcd-3c7be176ccf3/image.png",
+"link": "https://www.credly.com/badges/20018a08-8498-4b5b-b29d-962741c571ef"
+},
+{
+"title": "Docker Essentials: A Developer Introduction",
+"issuer": "IBM",
+"issued": "Oct 19, 2022",
+"image": "https://images.credly.com/images/b0c5445a-72a2-46ce-a599-96147e210efb/blob",
+"link": "https://www.credly.com/badges/4669927a-cad7-459f-bbcd-3af6533511f7"
+},
+{
+"title": "AWS Knowledge: Data Migration - Training Badge",
+"issuer": "Amazon Web Services Training and Certification",
+"issued": "Oct 11, 2022",
+"image": "https://images.credly.com/images/f9092eff-1951-4b43-901c-d43df9034b22/blob",
+"link": "https://www.credly.com/badges/7cb885e1-46b1-4b25-91b7-d5e8e8d99970"
+},
+{
+"title": "Cloud Native Security Conference - Data Security",
+"issuer": "IBM",
+"issued": "Apr 1, 2022",
+"image": "https://images.credly.com/images/640641c6-0917-430b-b319-88d5e0eeb8eb/Cloud_Native_Sec_Conf_-_Data_Security.png",
+"link": "https://www.credly.com/badges/1241948f-0973-4615-845a-a92777ffef35"
+},
+{
+"title": "Deep Learning Essentials",
+"issuer": "IBM",
+"issued": "Jul 19, 2021",
+"image": "https://images.credly.com/images/ef4b79d9-5b12-4d26-b4f2-a8fc22b0351b/blob",
+"link": "https://www.credly.com/badges/b736090b-fd5c-4323-98ee-60bec91198c2"
+},
+{
+"title": "Introduction to Cybersecurity",
+"issuer": "Cisco",
+"issued": "Apr 25, 2020",
+"image": "https://images.credly.com/images/af8c6b4e-fc31-47c4-8dcb-eb7a2065dc5b/I2CS__1_.png",
+"link": "https://www.credly.com/badges/00976637-14a2-44d0-88c4-51dd37bdc0dc"
+},
+{
+"title": "Applied Data Science Capstone",
+"issuer": "Coursera",
+"issued": "Apr 16, 2020",
+"image": "https://images.credly.com/images/60f2e1e1-1b74-4dc0-a24b-cd08b460c12d/Applied_Data_Science_Capstone.png",
+"link": "https://www.credly.com/badges/98e86753-dc32-41c1-bd5a-52064a0958f6"
+},
+{
+"title": "Applied Data Science Specialization",
+"issuer": "Coursera",
+"issued": "Apr 16, 2020",
+"image": "https://images.credly.com/images/4a5f4849-54ae-461f-97ad-cb9c9a04eb63/Adv_Data_Science_Specialization.png",
+"link": "https://www.credly.com/badges/218aa725-4800-4640-a1b8-58defc27d3b5"
+},
+{
+"title": "Data Visualization with Python",
+"issuer": "Coursera",
+"issued": "Apr 15, 2020",
+"image": "https://images.credly.com/images/9da3eedf-fda3-4e81-bb46-d174b4699bf1/image.png",
+"link": "https://www.credly.com/badges/fa8abc1e-27a4-4b62-abf9-51295e3f2696"
+},
+{
+"title": "Data Analysis with Python",
+"issuer": "Coursera",
+"issued": "Apr 14, 2020",
+"image": "https://images.credly.com/images/950038fc-2519-4f79-8827-f71caf0f5095/image.png",
+"link": "https://www.credly.com/badges/383a18a6-85aa-4fc0-9d56-6e126fa17446"
+},
+{
+"title": "Python for Data Science and AI",
+"issuer": "Coursera",
+"issued": "Apr 13, 2020",
+"image": "https://images.credly.com/images/40bee502-a5b3-4365-90e7-57eed5067594/image.png",
+"link": "https://www.credly.com/badges/2d6db8e0-8851-4c86-aa3a-225777dcb2cc"
+},
+{
+"title": "Data Science Foundations - Level 2 (V2)",
+"issuer": "IBM",
+"issued": "Apr 12, 2020",
+"image": "https://images.credly.com/images/2fde0bfe-ca31-4e31-860b-a109eeb86c05/blob",
+"link": "https://www.credly.com/badges/41d0a2a0-7107-482b-a5b8-8931fb19a63e"
+},
+{
+"title": "Data Science Methodologies",
+"issuer": "IBM",
+"issued": "Apr 12, 2020",
+"image": "https://images.credly.com/images/3e42e90a-da56-4680-9f9b-140e8a1dd6d4/blob",
+"link": "https://www.credly.com/badges/43f46daa-077e-4f75-a01c-0a5197194a37"
+},
+{
+"title": "Data Science Foundations - Level 1",
+"issuer": "IBM",
+"issued": "Apr 11, 2020",
+"image": "https://images.credly.com/size/340x340/images/5950e6bd-1d0b-40f0-9313-4b2fa36622ce/blob",
+"link": "https://www.credly.com/badges/2f6dee6c-39ab-4ff4-810d-3035de8f837a"
+},
+{
+"title": "Data Visualization with R",
+"issuer": "IBM",
+"issued": "Apr 9, 2020",
+"image": "https://images.credly.com/size/340x340/images/7f5dae04-e6dc-4ab6-8a6e-b77728c4ac9e/blob",
+"link": "https://www.credly.com/badges/17a17f5a-d2f9-47b2-8c5c-f6ec77357967"
+},
+{
+"title": "Applied Data Science with Python - Level 2",
+"issuer": "IBM",
+"issued": "Apr 8, 2020",
+"image": "https://images.credly.com/size/340x340/images/90b92982-adc0-4826-afeb-455be8609899/blob",
+"link": "https://www.credly.com/badges/a9bbaba9-8705-4905-9240-2249a996d46f"
+},
+{
+"title": "Python for Data Science",
+"issuer": "IBM",
+"issued": "Apr 8, 2020",
+"image": "https://images.credly.com/size/340x340/images/b40db465-587f-45eb-a854-af8630a630e7/blob",
+"link": "https://www.credly.com/badges/8f794539-e7d1-408e-8aaa-910f8ab1668d"
+},
+{
+"title": "Data Visualization Using Python",
+"issuer": "IBM",
+"issued": "Apr 7, 2020",
+"image": "https://images.credly.com/size/340x340/images/90baa00c-2d2b-4544-8c11-77c99068728a/blob",
+"link": "https://www.credly.com/badges/f085869c-30f7-4700-9276-2c4416f73a79"
+},
+{
+"title": "Data Analysis Using Python",
+"issuer": "IBM",
+"issued": "Apr 5, 2020",
+"image": "https://images.credly.com/size/340x340/images/f5bb6420-710c-4508-bd1f-df3a9d3fafb0/blob",
+"link": "https://www.credly.com/badges/31166686-cc5a-4f71-9478-cf74b228774c"
+}
+]

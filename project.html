@@ -1,0 +1,481 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+  <link href="./css/style.css" rel="stylesheet"> 
+
+  <script src="./css/tailwind.all.js"></script>
+
+   
+  <title>Abhishek Singh</title>
+
+</head>
+
+
+  <style>
+
+  .allerta-stencil-regular {
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#navbar-nav  .active { 
+    border-bottom: 1px solid black;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid black;
+
+}
+@media only screen and (max-width: 600px) {
+
+  #navbar-nav  .active { 
+    border-bottom: 1px solid white;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid white;
+}
+
+}
+#social li a:hover{
+  border-bottom: 0.5px solid white;
+}
+
+</style>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal m-0 sm:m-5 ">
+  
+  <div class="bg-white" id="nav">
+    <header class="sticky top-0 z-30 w-full bg-white sm:px-4  border-b-[0.1px] border-b-slate-200 shadow-sm ">
+      <div class="flex items-center justify-between mx-auto max-w-7xl">
+        <a href="./index.html">
+          <span class="text-2xl font-extrabold text-sky-800 "><img class="W-100 ml-2" src="assets/images/absbonw.svg" wiidth="60px"alt=""></span>
+        </a>
+        <div class="flex items-center space-x-1">
+          <!-- <ul class="hidden space-x-2 md:inline-flex">
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Home</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Blogs</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">About Us</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Contact Us</a></li>
+  
+          </ul> -->
+
+
+          <button id="toggle-menu-button" class="z-50 lg:hidden relative m-5">
+            <span class="sr-only">Toggle Menu</span>
+            <div id="open" class="h-7 flex flex-col items-end justify-between ">
+              <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-6 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            </div>
+            <div  id="close" class="hidden h-7 flex flex-col items-end justify-between">
+              <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+            <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+            </div>
+          </button>
+          <div id="toggle-menu" class="hidden lg:block font-bold text-white text-right text-3xl bg-gray-800 fixed top-0 left-0 h-screen w-screen flex flex-col items-center justify-center lg:text-lg lg:relative lg:text-slate-900 lg:bg-transparent lg:w-auto lg:h-auto lg:text-left">
+            <ul class="flex flex-col gap-y-7 lg:flex-row lg:gap-2">
+            <!-- <li class="lg:px-4 ">
+              <a href="index.html" class="transition ease-in-out duration-150 "></a></li>
+            <li class="lg:px-4">
+              <a href="project.html"  class="transition ease-in-out duration-150 "></a>
+            </li>
+            <li class="lg:px-4">
+              <a href="" class="transition ease-in-out duration-150 "></a>
+            </li> -->
+            <!-- <li class="lg:px-4 text-center" id="navbar-nav">
+              
+              <a href="careers.html" class="transition ease-in-out duration-150 active">Careers</a>
+            </li> -->
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./project.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/project.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Projects
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./certificate.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/cert.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Certificates
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://github.com/abhsheksingh" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/github.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  GitHub
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/linkdns.svg" 
+                      class="w-8 h-8  invert lg:invert-0" 
+                      alt="LinkedIn"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  LinkedIn
+                  </span>
+            </li>
+
+
+
+            <!-- <li class="lg:border-r lg:px-4 lg:border-slate-900">
+              <a href="team.html" title"Go to XXX" class="transition ease-in-out duration-150 ">Meet Team</a>
+            </li> -->
+            <!-- <li class="lg:px-4">
+              <a href=""  class="transition ease-in-out duration-150 "></a>
+            </li> -->
+          </ul>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  
+    <section class=" mx-auto max-w-screen-xl bg-white">
+
+    </section>
+   
+
+ <h1 class="py-8 text-center text-3xl font-bold uppercase">Projects</h1>
+
+  <!-- PROJECTS GRID -->
+  <section class="px-4 py-16 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-7xl">
+      <div id="projectsGrid" class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3"></div>
+    </div>
+  </section>
+
+  <!-- MODALS CONTAINER -->
+  <div id="modalsContainer"></div>
+
+  <!-- FULLSCREEN IMAGE VIEW -->
+  <div id="imageViewer" class="fixed inset-0 hidden z-[999] bg-black flex items-center justify-center p-4">
+    <button onclick="closeImage()" class="absolute top-4 right-4 z-50 w-12 h-12 rounded-full bg-white text-black flex items-center justify-center text-3xl font-bold shadow-lg">×</button>
+    <button onclick="changeFullscreenImage(-1)" class="absolute left-4 text-white text-5xl font-bold hover:scale-110 transition">‹</button>
+    <img id="fullImage" class="max-w-full max-h-full border-2 border-white rounded-lg">
+    <button onclick="changeFullscreenImage(1)" class="absolute right-4 text-white text-5xl font-bold hover:scale-110 transition">›</button>
+  </div>
+
+  <!-- PROJECT CARDS SCRIPT -->
+  <script>
+    fetch('data/projects.json')
+      .then(res => res.json())
+      .then(projects => {
+        const grid = document.getElementById('projectsGrid');
+        const modals = document.getElementById('modalsContainer');
+
+        projects.forEach(project => {
+
+          // ===== PROJECT CARD =====
+          const card = document.createElement('div');
+          card.className = "group relative overflow-hidden rounded-xl border-2 border-black shadow-lg hover:shadow-xl transition";
+
+          card.innerHTML = `
+            <div class="h-64 overflow-hidden">
+              <img src="${project.images[0]}"
+                   class="h-full w-full object-cover transition
+                          scale-105 sm:scale-100 sm:group-hover:scale-105">
+            </div>
+
+            <!-- WHITE OVERLAY -->
+            <div class="absolute inset-0 flex items-end bg-white p-6
+                        opacity-100 sm:opacity-0 sm:group-hover:opacity-100
+                        transition duration-300">
+
+              <div class="translate-y-0 sm:translate-y-6 sm:group-hover:translate-y-0
+                          transition duration-300 text-black">
+                <h3 class="text-2xl font-bold">${project.title}</h3>
+                <p class="mt-2 text-gray-700">${project.description.substring(0, 70)}...</p>
+                <button onclick="openModal('${project.id}')" class="mt-4 font-semibold hover:underline">
+                  View Project →
+                </button>
+              </div>
+
+            </div>
+          `;
+
+          grid.appendChild(card);
+
+          // ===== MODAL =====
+          const modal = document.createElement('div');
+          modal.id = project.id;
+          modal.className = "fixed inset-0 hidden z-50 flex items-center justify-center bg-black/50 p-4";
+
+          modal.innerHTML = `
+            <div class="bg-white max-w-6xl w-full max-h-[95vh] overflow-auto rounded-xl shadow-xl relative pt-12">
+              <button onclick="closeModal('${project.id}')" class="absolute top-3 right-3 z-50 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-2xl font-bold hover:scale-105 transition shadow-lg">×</button>
+
+              <div class="grid lg:grid-cols-2 gap-6 p-6">
+                <!-- IMAGE GALLERY -->
+                <div class="space-y-4">
+                  <div class="relative border-2 border-black rounded-lg overflow-hidden bg-white">
+                    <button onclick="changeMainImage('${project.id}', -1)" class="absolute left-2 top-1/2 -translate-y-1/2 bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-10 hover:scale-110 transition">‹</button>
+                    <img id="main-${project.id}" src="${project.images[0]}" data-index="0" data-images='${JSON.stringify(project.images)}' onclick="expandImage('${project.id}')" class="w-full h-[420px] object-contain cursor-zoom-in">
+                    <button onclick="changeMainImage('${project.id}', 1)" class="absolute right-2 top-1/2 -translate-y-1/2 bg-black/80 text-white w-10 h-10 rounded-full flex items-center justify-center z-10 hover:scale-110 transition">›</button>
+                  </div>
+
+                  <div class="flex gap-3 overflow-x-auto scroll-smooth py-2">
+                    ${project.images.map(img => `
+                      <img src="${img}" onclick="switchImage('${project.id}', '${img}')"
+                           class="w-24 h-24 object-cover border-2 border-black cursor-pointer hover:opacity-70 transition shrink-0">
+                    `).join("")}
+                  </div>
+                </div>
+
+                <!-- INFO -->
+                <div class="space-y-5 text-black">
+                  <h2 class="text-3xl font-bold">${project.title}</h2>
+                  <div class="flex flex-wrap gap-4">
+                    ${project.icons.map(icon => `<img src="${icon}" class="w-9 h-9 border border-black p-1 rounded">`).join("")}
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    ${project.tags.map(tag => `<span class="border border-black px-3 py-1 text-sm">${tag}</span>`).join("")}
+                  </div>
+
+                  ${project.link ? `
+                    <div class="mt-3">
+                      <a href="${project.link}" target="_blank" class="text-blue-600 font-semibold hover:underline">
+                        Visit Project →
+                      </a>
+                    </div>
+                  ` : ''}
+
+                  <p class="text-gray-700 leading-relaxed">${project.description}</p>
+                </div>
+              </div>
+            </div>
+          `;
+
+          modals.appendChild(modal);
+
+          modal.addEventListener('click', e => {
+            if (e.target === modal) closeModal(project.id);
+          });
+
+        });
+      });
+
+    // ===== MODAL FUNCTIONS =====
+    function openModal(id) { document.getElementById(id).classList.remove('hidden'); document.body.classList.add('overflow-hidden'); }
+    function closeModal(id) { document.getElementById(id).classList.add('hidden'); document.body.classList.remove('overflow-hidden'); }
+    function changeMainImage(projectId, direction) {
+      const mainImg = document.getElementById(`main-${projectId}`);
+      const images = JSON.parse(mainImg.dataset.images);
+      let index = parseInt(mainImg.dataset.index);
+      index += direction;
+      if (index < 0) index = images.length - 1;
+      if (index >= images.length) index = 0;
+      mainImg.src = images[index];
+      mainImg.dataset.index = index;
+    }
+    function switchImage(projectId, img) {
+      const mainImg = document.getElementById(`main-${projectId}`);
+      const images = JSON.parse(mainImg.dataset.images);
+      mainImg.src = img;
+      mainImg.dataset.index = images.indexOf(img);
+    }
+    function expandImage(projectId) {
+      const mainImg = document.getElementById(`main-${projectId}`);
+      document.getElementById('imageViewer').classList.remove('hidden');
+      document.getElementById('fullImage').src = mainImg.src;
+      window.currentProject = projectId;
+    }
+    function changeFullscreenImage(direction) {
+      changeMainImage(window.currentProject, direction);
+      const mainImg = document.getElementById(`main-${window.currentProject}`);
+      document.getElementById('fullImage').src = mainImg.src;
+    }
+    function closeImage() { document.getElementById('imageViewer').classList.add('hidden'); }
+  </script>
+
+  <script>
+    // MENU TOGGLE
+    var button = document.querySelector('#toggle-menu-button');
+    var menu = document.querySelector('#toggle-menu');
+    var open = document.querySelector('#open');
+    var close = document.querySelector('#close');
+
+    button.addEventListener('click', ()=>{
+      menu.classList.toggle('hidden');
+      open.classList.toggle('hidden');
+      close.classList.toggle('hidden');
+    });
+  </script>
+
+
+
+
+
+
+
+</div>
+</div>  
+</div>  
+</div>
+</div>
+</div>
+
+<div class="flex py-10 w-7xl bg-white"></div>
+
+<footer aria-label="Site Footer" class="bg-black text-white">
+  <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="flex justify-center text-white sm:justify-start ">
+            <a href="./index.html">
+          <img src="assets/images/abswonb.svg" class="w-14" alt="" /></a>
+        </div>
+
+          <div class="flex justify-center text-white sm:justify-start ">
+          
+        <p
+          class="mt-6 max-w-md text-center leading-relaxed  text-white sm:max-w-xs sm:text-left"
+        > sighabh@gmail.com
+          
+        </p>
+        </div>
+
+
+<ul id="social" class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+  <li>
+    <a href="./project.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Projects</span>
+      <img src="icons/project.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+    <li>
+    <a href="./certificate.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Certificates</span>
+      <img src="icons/cert.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://github.com/abhsheksingh" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">GitHub</span>
+      <img src="icons/github.svg" class="w-full h-full object-contain invert" alt="GitHub"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">LinkedIn</span>
+      <img src="icons/linkdns.svg" class="w-full h-full object-contain invert" alt="LinkedIn"/> 
+    </a>
+  </li>
+</ul>
+
+</div>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2"
+      >
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100"></p>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100 text-center"></p>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-200"></p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li
+              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <address class="-mt-0.5 flex-1 not-italic text-gray-7200 font-bold">
+                United Kingdom
+               
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="text-center sm:flex sm:justify-between sm:text-left">
+        <p class="text-sm text-gray-300">
+          <span class="block sm:inline"></span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+        </p>
+
+        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+           Abhishek Singh &copy; <script>document.write(new Date().getFullYear());</script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+  </body>
+</html>

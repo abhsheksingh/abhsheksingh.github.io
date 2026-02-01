@@ -1,0 +1,923 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+  <link href="./css/style.css" rel="stylesheet"> 
+  <!-- <link rel="stylesheet" href="css/owl.carousel.min.css"> -->
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="./css/tailwind.all.js"></script>
+
+   
+  <title>Abhishek Singh</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <link rel="stylesheet" href="https://unpkg.com/d3-milestones/build/d3-milestones.css">
+  <script src="https://unpkg.com/d3-milestones/build/d3-milestones.min.js"></script>
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+</head>
+
+
+  <style>
+    /* Buttons & D3 styling */
+    .dtv-btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 10px 16px; border-radius: 9999px; border: 1px solid #e2e2e2;
+      background: linear-gradient(180deg, #ffffff, #f3f3f3);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      color: #333; font-size: 14px; font-weight: 600; cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+      user-select: none;
+    }
+    .dtv-btn:hover { 
+      transform: translateY(-1px); 
+      background: linear-gradient(180deg,#fff,#ececec); 
+      border-color:#cfcfcf; 
+      box-shadow:0 6px 14px rgba(0,0,0,0.12); 
+    }
+    .dtv-btn.active { 
+      border-color:#000000; 
+      border-width: 2px;
+      /* box-shadow:0 6px 16px rgba(0,137,123,0.18);  */
+      background:linear-gradient(180deg,#fff,#ededed); 
+    }
+
+    .link { fill: none; stroke: #ccc; stroke-width: 2px; }
+    .hexagon { fill: #eee; stroke: #999; stroke-width: 2px; }
+    .node text { fill: #333; }
+
+    /* Education timeline tweaks */
+    .timeline-wrapper { width: 100%; overflow-x: auto; }
+    .milestone-title { font-weight: bold; font-size: 14px; }
+    .milestone-detail { font-size: 12px; fill: #555; }
+
+    /* Responsive height adjustments for the Tech Stack graph */
+    /* @media (max-width: 640px) {
+      #tech-graph-container { padding-bottom: 120% !important; }
+    }
+    @media (min-width: 641px) and (max-width: 1024px) {
+      #tech-graph-container { padding-bottom: 90% !important; }
+    }
+    @media (min-width: 1025px) {
+      #tech-graph-container { padding-bottom: 50% !important; }
+    }
+	 @media (min-width: 1080px) {
+	  #tech-graph-container { padding-bottom: 40% !important; }
+	} */
+	  
+  .allerta-stencil-regular {
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#navbar-nav  .active { 
+    border-bottom: 1px solid black;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid black;
+
+}
+@media only screen and (max-width: 600px) {
+
+  #navbar-nav  .active { 
+    border-bottom: 1px solid white;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid white;
+}
+
+}
+#social li a:hover{
+  border-bottom: 0.5px solid white;
+}
+:root {
+  --marquee-width: 100%;
+  --marquee-height: 120px;
+  --marquee-elements-displayed: 6;
+  --marquee-element-width: calc(var(--marquee-width) / var(--marquee-elements-displayed));
+  --marquee-animation-duration: calc(var(--marquee-elements) * 3s);
+}
+
+.marquee-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.marquee {
+  width: var(--marquee-width);
+  height: var(--marquee-height);
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 2;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, #fff 0%, transparent 100%);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, #fff 0%, transparent 100%);
+}
+
+.marquee-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+  padding: 0;
+  margin: 0;
+}
+
+.marquee.reverse .marquee-content {
+  animation: scrolling-reverse var(--marquee-animation-duration) linear infinite;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+}
+
+@keyframes scrolling-reverse {
+  0% {
+    transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  width: var(--marquee-element-width);
+  height: 100%;
+  padding: 1rem;
+}
+
+.marquee-content li img {
+  max-height: 60%;
+  max-width: 100%;
+  object-fit: contain;
+
+}
+
+@media (max-width: 768px) {
+  :root {
+    --marquee-elements-displayed: 3;
+  }
+
+  .marquee::before,
+  .marquee::after {
+    width: 5rem;
+  }
+}
+</style>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal m-0 sm:m-5 ">
+  
+  <div class="bg-white" id="nav">
+    <header class="sticky top-0 z-30 w-full bg-white sm:px-4  border-b-[0.1px] border-b-slate-200 shadow-sm ">
+      <div class="flex items-center justify-between mx-auto max-w-7xl">
+        <a href="./index.html">
+          <span class="text-2xl font-extrabold text-sky-800 "><img class="W-100 ml-2" src="assets/images/absbonw.svg" wiidth="60px"alt=""></span>
+        </a>
+        <div class="flex items-center space-x-1">
+          <button id="toggle-menu-button" class="z-50 lg:hidden relative m-5">
+            <span class="sr-only">Toggle Menu</span>
+            <div id="open" class="h-7 flex flex-col items-end justify-between ">
+              <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-6 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            </div>
+            <div  id="close" class="hidden h-7 flex flex-col items-end justify-between">
+              <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+            <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+            </div>
+          </button>
+          <div id="toggle-menu" class="hidden lg:block font-bold text-white text-right text-3xl bg-gray-800 fixed top-0 left-0 h-screen w-screen flex flex-col items-center justify-center lg:text-lg lg:relative lg:text-slate-900 lg:bg-transparent lg:w-auto lg:h-auto lg:text-left">
+            <ul class="flex flex-col gap-y-7 lg:flex-row lg:gap-2">
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./project.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/project.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Projects
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./certificate.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/cert.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Certificates
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://github.com/abhsheksingh" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/github.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  GitHub
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/linkdns.svg" 
+                      class="w-8 h-8  invert lg:invert-0" 
+                      alt="LinkedIn"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  LinkedIn
+                  </span>
+            </li>
+          </ul>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  
+    <section class=" mx-auto max-w-screen-xl bg-white">
+
+    </section>
+   
+
+
+
+<div class="px-8 bg-white text-slate-900 text-justify mt-16 flex flex-col items-center">
+  <div class="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 overflow-hidden rounded-full border border-gray-800">
+    <img 
+      src="assets/images/mm2.png" 
+      alt="Profile" 
+      class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-300 ease-in-out"
+    />
+  </div>
+  <h1 class="py-8 text-center text-3xl font-bold uppercase">Abhishek Singh</h1>
+</div>
+
+
+<div class="content-center w-full bg-white mx-auto max-w-7xl">
+  <!-- Summary -->
+  <div class="p-4 sm:p-6 md:p-8 mb-6 text-black rounded-lg first-letter:text-3xl text-justify"">
+<p>Experienced data scientist with a strong background in web development and data engineering. Proficient in creating and optimizing data pipelines, designing databases, and implementing ETL processes. Skilled in programming languages like Python, Java, and SQL. Expertise in machine learning algorithms, statistical analysis, and data visualization. Adept at extracting actionable insights from complex datasets and translating them into meaningful business solutions. Proven ability to work collaboratively in cross-functional teams and communicate technical concepts effectively to both technical and non-technical stakeholders.</p> 
+  </div>
+
+  <!-- Tech Stack -->
+  <div class="bg-white rounded-2xl p-4 sm:p-6 md:p-10 w-full max-w-6xl mx-auto">
+    <!-- <h1 class="text-xl sm:text-2xl md:text-3xl font-bold text-center mb-4 sm:mb-6">
+      Familiar Technology Stacks
+    </h1> -->
+    <h1 class="py-6 mx-auto text-center text-3xl font-bold uppercase" > Familiar Technology Stacks </h1>
+    <div id="buttons" class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-4 sm:mb-6"></div>
+    <div id="tech-graph-container" class="relative w-full pb-[120%] min-[641px]:pb-[90%] min-[1025px]:pb-[50%] min-[1080px]:pb-[40%]">
+      <svg class="absolute inset-0 w-full h-full"></svg>
+    </div>
+  </div>
+</div>
+
+<!-- EDUCATION  -->
+<div class="bg-white rounded-2xl p-4 sm:p-6 md:p-10 w-full max-w-6xl mx-auto">
+  <h1 class="py-6 mx-auto text-center text-3xl font-bold uppercase" > Education  </h1>
+    <div id="education-timeline" class="relative w-full ">
+      <svg class="absolute inset-0 w-full h-full"></svg>
+    </div>
+    </div>
+  
+
+ 
+
+
+<script>
+let categories = [];
+let currentCategory = null;
+
+function hexagon(r){
+  let angle = Math.PI / 3;
+  return d3.range(6)
+    .map(i => [r * Math.cos(angle * i), r * Math.sin(angle * i)])
+    .join("L") + "Z";
+}
+
+function setActiveButton(categoryName){
+  document.querySelectorAll('.dtv-btn').forEach(btn=>{
+    btn.classList.toggle(
+      'active',
+      btn.getAttribute('data-category') === categoryName
+    );
+  });
+}
+
+/* ======================================================
+   ONLY CHANGE IS HERE: smooth transitions added
+   ====================================================== */
+function drawTree(categoryName){
+  currentCategory = categoryName;
+  setActiveButton(categoryName);
+
+  const container = document.querySelector('#tech-graph-container');
+  const width = container.clientWidth;
+  const height = container.clientHeight; // ✅ unchanged
+
+  const svg = d3.select("svg");
+  svg.selectAll("*").remove();
+
+  /* fade + slight slide (visual only) */
+  const g = svg.append("g")
+    .attr("transform", "translate(0,70)")
+    .style("opacity", 0);
+
+  g.transition()
+    .duration(1200)
+    .ease(d3.easeCubicOut)
+    .style("opacity", 1)
+    .attr("transform", "translate(0,50)");
+
+  const category = categories.find(c => c.category === categoryName);
+  const data = { name: category.category, children: category.technologies };
+  const root = d3.hierarchy(data);
+
+  const treeLayout = d3.tree().size([width, height - 100]);
+  treeLayout(root);
+
+  const nodeRadius = width < 640 ? 20 : 30;
+  const iconSize = width < 640 ? 20 : 30;
+  const labelFont = width < 640 ? "10px" : "12px";
+  const labelOffset = width < 640 ? nodeRadius + 12 : nodeRadius + 15;
+
+  /* animated links */
+  const links = g.selectAll(".link")
+    .data(root.links())
+    .enter()
+    .append("path")
+    .attr("class","link")
+    .attr("d", d3.linkVertical().x(d=>d.x).y(d=>d.y+15))
+    .attr("stroke-dasharray", function(){
+      const len = this.getTotalLength();
+      return `${len} ${len}`;
+    })
+    .attr("stroke-dashoffset", function(){
+      return this.getTotalLength();
+    });
+
+  links.transition()
+    .duration(600)
+    .delay((d,i)=> i * 40)
+    .ease(d3.easeCubicOut)
+    .attr("stroke-dashoffset", 0);
+
+  /* staggered nodes (opacity only) */
+  const node = g.selectAll(".node")
+    .data(root.descendants())
+    .enter()
+    .append("g")
+    .attr("class","node")
+    .attr("transform", d=>`translate(${d.x},${d.y})`)
+    .style("opacity", 0);
+
+  node.transition()
+    .delay((d,i)=> i * 50)
+    .duration(350)
+    .ease(d3.easeCubicOut)
+    .style("opacity", 1);
+
+  /* root node */
+  node.filter(d=>d.depth===0)
+    .append("path")
+    .attr("d",hexagon(50))
+    .attr("class","hexagon");
+
+  node.filter(d=>d.depth===0)
+    .append("text")
+    .attr("text-anchor","middle")
+    .attr("dy",5)
+    .text(d=>d.data.name);
+
+  /* child nodes */
+  const nodeGroup = node.filter(d=>d.depth>0)
+    .append("g")
+    .style("cursor","pointer");
+
+  nodeGroup.append("circle")
+    .attr("r", nodeRadius)
+    .attr("fill", "#fff")
+    .attr("stroke", "#ccc")
+    .attr("stroke-width", 2);
+
+  nodeGroup.filter(d=>d.data.icon)
+    .append("image")
+    .attr("xlink:href", d=>d.data.icon)
+    .attr("x",-iconSize/2)
+    .attr("y",-iconSize/2)
+    .attr("width", iconSize)
+    .attr("height", iconSize)
+    .on("click",(e,d)=>{
+      if(d.data.link) window.open(d.data.link,"_blank");
+    });
+
+  nodeGroup
+    .on("mouseover", function(){
+      d3.select(this).select("circle")
+        .transition().duration(120)
+        .attr("stroke","#000");
+    })
+    .on("mouseout", function(){
+      d3.select(this).select("circle")
+        .transition().duration(120)
+        .attr("stroke","#ccc");
+    });
+
+  nodeGroup.append("text")
+    .attr("dy",labelOffset)
+    .attr("text-anchor","middle")
+    .style("font-size",labelFont)
+    .text(d=>d.data.name);
+}
+
+/* load categories */
+fetch("data/categories.json")
+  .then(res=>res.json())
+  .then(data=>{
+    categories = data;
+    const buttonContainer = document.getElementById("buttons");
+
+    categories.forEach(cat=>{
+      const btn = document.createElement("button");
+      btn.className = "dtv-btn";
+      btn.textContent = cat.category;
+      btn.setAttribute("data-category", cat.category);
+      btn.onclick = ()=>drawTree(cat.category);
+      buttonContainer.appendChild(btn);
+    });
+
+    drawTree(categories[0].category);
+    window.addEventListener("resize", ()=>drawTree(currentCategory));
+  });
+
+    // === Education Timeline ===
+    fetch("data/education.json")
+      .then(res => res.json())
+      .then(eduMilestones => {
+        const chart = milestones('#education-timeline')
+          .mapping({ timestamp: 'year', text: 'title' })
+          .parseTime('%Y')
+          .aggregateBy('year')
+          .orientation('horizontal')
+          .distribution('top-bottom')
+          .autoResize(true)
+          .optimize(true)
+          .render(eduMilestones);
+
+        chart.svg.selectAll('.milestones-item text').each(function(d, i){
+          const el = d3.select(this);
+          el.text("");
+
+          el.append('tspan')
+            .attr('class','milestone-title')
+            .attr('x', 0)
+            .attr('dy', 0)
+            .text(eduMilestones[i].title);
+
+          el.append('tspan')
+            .attr('class','milestone-detail')
+            .attr('x', 0)
+            .attr('dy', '1.2em')
+            .text(eduMilestones[i].detail);
+
+          if (eduMilestones[i].icon) {
+            chart.svg.append("image")
+              .attr("xlink:href", eduMilestones[i].icon)
+              .attr("width", 24)
+              .attr("height", 24)
+              .attr("x", d.x ? d.x - 12 : 0)
+              .attr("y", d.y ? d.y - 40 : 0);
+          }
+        });
+      });
+  </script>
+<!--  TECK STACK BLOCK-->
+
+
+
+    <div class="px-8 py-8 bg-white text-slate-900 text-justify py-2 " >
+        <h1 class="py-8 mx-auto text-center text-3xl font-bold uppercase" >Worked in Companies  </h1>
+
+
+      <!--MARQEES  -->
+        <div class="logo-row">
+            <div class="marquee">
+              <ul class="marquee-content">
+                <li><img src="icons/ons.svg" alt="ONS"></li>
+                <li><img src="icons/barclays.svg" alt="CodePen"></li>
+                <li><img src="icons/uliv1.svg" alt="React"></li>
+                <li><img src="icons/biograd.jpg.webp"  alt="as"></li>
+                <li><img src="icons/Pierian.svg"  alt="as"></li>
+
+            </div>
+        </div>
+
+      <!-- Digital Badges -->
+
+      <div class="container mx-auto px-4 py-8">
+            <div class="px-8 bg-white  text-justify py-2 " >
+            <h1 class="py-8 mx-auto text-center text-3xl font-bold uppercase" > Digital Badges  </h1>
+
+          </div>
+        <div id="cardGrid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  lg:grid-cols-4 gap-6"></div>
+      </div>
+
+</div>
+
+<script>
+  // Load the JSON file
+  fetch("data/badges.json")
+    .then(response => response.json())
+    .then(data => {
+      const cardGrid = document.getElementById("cardGrid");
+
+      data.forEach(item => {
+        const card = `
+          <a href="${item.link}" 
+             class="block bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:scale-105 hover:shadow-xl">
+            <div class="overflow-hidden">
+             <img 
+                    src="${item.image}" 
+                    alt="${item.title}"
+                    class="w-full h-48 object-contain bg-gray-50 p-2 transition-transform duration-300 hover:scale-105"
+                  />
+
+            </div>
+            <div class="p-4">
+              <h2 class="text-lg font-semibold text-gray-800">${item.title}</h2>
+            </div>
+          </a>
+        `;
+        cardGrid.innerHTML += card;
+      });
+    })
+    .catch(err => console.error("Error loading JSON:", err));
+</script>
+
+<script>
+  document.querySelectorAll('.marquee').forEach((marquee) => {
+    const root = document.documentElement;
+    const displayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+    const content = marquee.querySelector(".marquee-content");
+
+    root.style.setProperty("--marquee-elements", content.children.length);
+
+    for (let i = 0; i < displayed; i++) {
+      content.appendChild(content.children[i].cloneNode(true));
+    }
+  });
+</script>
+
+<!--MARQEES  -->
+
+
+
+
+
+
+
+<!-- Digital Badges -->
+
+
+    
+    </div>
+  
+</div>
+
+
+
+  </div>
+
+
+</div>
+
+<div class="flex py-10 w-7xl bg-white"></div>
+
+<footer aria-label="Site Footer" class="bg-black text-white">
+  <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="flex justify-center text-white sm:justify-start ">
+          <a href="./index.html">
+          <img src="assets/images/abswonb.svg" class="w-14" alt="" /></a>
+        </div>
+
+          <div class="flex justify-center text-white sm:justify-start ">
+          
+        <p
+          class="mt-6 max-w-md text-center leading-relaxed  text-white sm:max-w-xs sm:text-left"
+        > sighabh@gmail.com
+          
+        </p>
+        </div>
+
+
+
+<ul id="social" class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+  <li>
+    <a href="./project.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Projects</span>
+      <img src="icons/project.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+    <li>
+    <a href="./certificate.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Certificates</span>
+      <img src="icons/cert.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://github.com/abhsheksingh" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">GitHub</span>
+      <img src="icons/github.svg" class="w-full h-full object-contain invert" alt="GitHub"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">LinkedIn</span>
+      <img src="icons/linkdns.svg" class="w-full h-full object-contain invert" alt="LinkedIn"/> 
+    </a>
+  </li>
+</ul>
+
+</div>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2"
+      >
+        <!-- <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100"></p>
+
+          <nav aria-label="Footer About Nav" class="mt-8">
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class=" text-white/75 transition hover:text-gray-200"
+                  href="/"
+                >
+                  
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-white/75 transition hover:text-gray-200"
+                  href="/"
+                >
+                 
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-white/75 transition hover:text-gray-200"
+                  href="/"
+                >
+                 
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-white/75 transition hover:text-gray-200"
+                  href="/"
+                >
+                 
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div> -->
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100"></p>
+<!-- 
+          <nav aria-label="Footer Services Nav" class="mt-8">
+            <ul class="space-y-4 text-sm">
+              <li>
+                <a
+                  class="text-slate-400 transition hover:text-slate-200 hover:font-bold"
+                  href="/"
+                >
+              
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-slate-400 transition hover:text-slate-200 hover:font-bold"
+                  href="/"
+                >
+                  
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-slate-400 transition hover:text-slate-200 hover:font-bold"
+                  href="/"
+                >
+                
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="text-slate-400 transition hover:text-slate-200 hover:font-bold"
+                  href="/"
+                >
+                
+                </a>
+              </li>
+            </ul>
+          </nav> -->
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100 text-center"></p>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-200"></p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <!-- <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-gray-100"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg> -->
+
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <!-- <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5 shrink-0 text-gray-100"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                  />
+                </svg> -->
+
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li
+              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <!-- <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5 shrink-0 text-gray-100"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                />
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                />
+              </svg> -->
+
+              <address class="-mt-0.5 flex-1 not-italic text-gray-7200 font-bold">
+                United Kingdom
+               
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="text-center sm:flex sm:justify-between sm:text-left">
+        <p class="text-sm text-gray-300">
+          <span class="block sm:inline"></span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+        </p>
+
+        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+           Abhishek Singh &copy; <script>document.write(new Date().getFullYear());</script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<Script>
+  var button = document.querySelector('#toggle-menu-button');
+  var menu = document.querySelector('#toggle-menu');
+  var open = document.querySelector('#open');
+  var close = document.querySelector('#close');
+
+  button.addEventListener('click', (e)=>{
+    menu.classList.toggle('hidden');
+    open.classList.toggle('hidden');
+    close.classList.toggle('hidden');
+  });
+</Script>
+
+  </body>
+</html>

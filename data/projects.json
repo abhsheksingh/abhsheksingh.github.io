@@ -1,0 +1,103 @@
+[  
+  {
+    "id": "project6",
+    "title": "Git Graph - GitHub Action",
+    "images": [
+      "assets/images/g1.png",
+      "assets/images/demo.gif"
+    ],
+    "description": "Automatically generate and embed a visual folder structure graph in your README.md file using GitHub Actions.",
+    "tags": ["GitHub Action","GitHub Marketplace","Git Workflow"],
+    "link": "https://github.com/marketplace/actions/git-graph-for-repository",
+    "icons": [
+      "icons/git.svg",
+      "icons/github.svg"
+    ]
+  },
+  {
+    "id": "project5",
+    "title": "Top 5 Movie Recommender",
+    "images": [
+      "assets/images/reco.png"
+    ],
+    "description": "Implemented a Movie recommender, which give top 5 related movies based on one movie you liked. This model uses attributes such as genre, director, description, actors, etc, for movies, to make suggestions for the users. The intuition behind this type of recommendation system is that if a user liked a particular movie or show, he/she might like a movie or a show similar to it.",
+    "tags": ["Docker", "Stremlit", "Flask"],
+    "icons": [
+      "icons/streamlit.svg",
+      "icons/flask.svg",
+      "icons/docker.svg"
+    ]
+  },
+  {
+    "id": "project4",
+    "title": "Portfolio - Website for Local Business",
+    "images": [
+      "assets/images/s1.png",
+      "assets/images/s2.png",
+      "assets/images/s3.png",
+      "assets/images/s4.png",
+      "assets/images/s5.png"
+    ],
+    "description": "Build portfolio website for a Business.",
+    "tags": ["Docker", "Stremlit", "Flask"],
+    "icons": [
+      "icons/streamlit.svg",
+      "icons/flask.svg",
+      "icons/docker.svg"
+    ]
+  },
+  {
+    "id": "project3",
+    "title": "LIMS application - BioGrad",
+    "images": [
+      "assets/images/lb1.png",
+       "assets/images/lb2.png",
+        "assets/images/lb3.png"
+    ],
+    "description": "Developed a full-featured Laboratory Information Management System (LIMS) to optimize the handling of biological samples. Key functionalities include sample registration, processing workflows, storage location tracking, dispatch management, and automatic generation of certificates for stored samples. The system also incorporates robust sample audit tracking and fine-grained user access control, enabling administrators to assign roles and permissions at multiple levels, ensuring data integrity, security, and efficient laboratory operations.",
+    "tags": ["AWS Cloud", "EC2", "FastAPI", "Flask", "D3 js"],
+    "icons": [
+      "icons/aws.svg",
+      "icons/fastapi.svg",
+      "icons/python.svg",
+      "icons/pyspark.svg",
+      "icons/mysql.svg",
+      "icons/d3.svg"
+    ]
+  },
+
+  {
+    "id": "project2",
+    "title": "KPI - Tracker App",
+    "images": [
+      "assets/images/kpi.png",
+      "assets/images/dash.png"
+    ],
+    "description": "A KPI tracking app for management to monitor team progress via dashboards, featuring user auth, form submission, data export, search/filter, audit logging, token management, and an admin panel.",
+    "tags": ["AWS", "Postgres SQL", "Docker"],
+    "icons": [
+      "icons/aws.svg",
+      "icons/docker.svg",
+      "icons/postgres.svg"
+    ]
+  },
+
+  {
+    "id": "project1",
+    "title": "Covid result portal - BioGrad",
+    "images": [
+      "assets/images/no-img.png"
+    ],
+    "description": "Developed the portal which enable the customers to view their covid test results on the company official portal. They can check by scanning the QR code provided to them during registration. The data was fed using a RESTful API in a very secure way (encrypted & hashed) from a AWS RDS - MySQL server, where data is fed from main database server using a data pipeline (created using python, PySpark).",
+    "tags": ["Microsoft SQL server", "Incremetal Data update"],
+    "icons": [
+      "icons/aws.svg",
+      "icons/python.svg",
+      "icons/pyspark.svg",
+      "icons/mysql.svg",
+      "icons/javascript.svg"
+    ]
+  }
+
+]
+

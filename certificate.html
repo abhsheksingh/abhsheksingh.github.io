@@ -1,0 +1,516 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+
+  <link href="./css/style.css" rel="stylesheet"> 
+
+  <script src="./css/tailwind.all.js"></script>
+
+   
+  <title>Abhishek Singh</title>
+
+</head>
+
+
+  <style>
+
+  .allerta-stencil-regular {
+  font-family: "Allerta Stencil", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+#navbar-nav  .active { 
+    border-bottom: 1px solid black;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid black;
+
+}
+@media only screen and (max-width: 600px) {
+
+  #navbar-nav  .active { 
+    border-bottom: 1px solid white;
+}
+#nav li a:hover { 
+    border-bottom: 0.5px solid white;
+}
+
+}
+#social li a:hover{
+  border-bottom: 0.5px solid white;
+}
+
+</style>
+<body class="bg-gray-100 font-sans leading-normal tracking-normal m-0 sm:m-5 ">
+  
+  <div class="bg-white" id="nav">
+    <header class="sticky top-0 z-30 w-full bg-white sm:px-4  border-b-[0.1px] border-b-slate-200 shadow-sm ">
+      <div class="flex items-center justify-between mx-auto max-w-7xl">
+        <a href="./index.html">
+          <span class="text-2xl font-extrabold text-sky-800 "><img class="W-100 ml-2" src="assets/images/absbonw.svg" wiidth="60px"alt=""></span>
+        </a>
+        <div class="flex items-center space-x-1">
+          <!-- <ul class="hidden space-x-2 md:inline-flex">
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Home</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Blogs</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">About Us</a></li>
+            <li><a href="#" class="px-4 py-2 font-semibold text-gray-600 rounded">Contact Us</a></li>
+  
+          </ul> -->
+
+
+          <button id="toggle-menu-button" class="z-50 lg:hidden relative m-5">
+            <span class="sr-only">Toggle Menu</span>
+            <div id="open" class="h-7 flex flex-col items-end justify-between ">
+              <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-6 bg-slate-900 rounded-full mr-4"></span>
+            <span class="block h-0.5 w-8 bg-slate-900 rounded-full mr-4"></span>
+            </div>
+            <div  id="close" class="hidden h-7 flex flex-col items-end justify-between">
+              <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform rotate-45 translate-y-0.5"></span>
+            <span class="block h-0.5 w-8 bg-white rounded-full origin-left transform -rotate-45 -translate-y-0.5"></span>
+            </div>
+          </button>
+          <div id="toggle-menu" class="hidden lg:block font-bold text-white text-right text-3xl bg-gray-800 fixed top-0 left-0 h-screen w-screen flex flex-col items-center justify-center lg:text-lg lg:relative lg:text-slate-900 lg:bg-transparent lg:w-auto lg:h-auto lg:text-left">
+            <ul class="flex flex-col gap-y-7 lg:flex-row lg:gap-2">
+            <!-- <li class="lg:px-4 ">
+              <a href="index.html" class="transition ease-in-out duration-150 "></a></li>
+            <li class="lg:px-4">
+              <a href="project.html"  class="transition ease-in-out duration-150 "></a>
+            </li>
+            <li class="lg:px-4">
+              <a href="" class="transition ease-in-out duration-150 "></a>
+            </li> -->
+            <!-- <li class="lg:px-4 text-center" id="navbar-nav">
+              
+              <a href="careers.html" class="transition ease-in-out duration-150 active">Careers</a>
+            </li> -->
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./project.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/project.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Projects
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center text-center group" >
+                  <a href="./certificate.html" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/cert.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    /> 
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                    Certificates
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://github.com/abhsheksingh" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/github.svg" 
+                      class="w-8 h-8 invert lg:invert-0" 
+                      alt="GitHub"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  GitHub
+                  </span>
+            </li>
+            <li class="lg:px-4 relative flex items-center group" >
+                  <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" target="_blank" class="transition ease-in-out duration-150">
+                    <img 
+                      src="icons/linkdns.svg" 
+                      class="w-8 h-8  invert lg:invert-0" 
+                      alt="LinkedIn"
+                    />
+                  </a>
+                  <!-- Tooltip centered above the icon -->
+                  <span class="absolute bottom-full left-1/2 mb-2 hidden group-hover:block bg-gray-800 text-white text-xs rounded py-1 px-2 -translate-x-1/2 whitespace-nowrap">
+                  LinkedIn
+                  </span>
+            </li>
+
+
+
+            <!-- <li class="lg:border-r lg:px-4 lg:border-slate-900">
+              <a href="team.html" title"Go to XXX" class="transition ease-in-out duration-150 ">Meet Team</a>
+            </li> -->
+            <!-- <li class="lg:px-4">
+              <a href=""  class="transition ease-in-out duration-150 "></a>
+            </li> -->
+          </ul>
+          </div>
+
+        </div>
+      </div>
+    </header>
+  
+    <section class=" mx-auto max-w-screen-xl bg-white">
+
+    </section>
+<h2 class="py-8 text-center text-3xl font-bold uppercase">Certificates</h2>
+
+<section class="px-4 py-16 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl">
+    <div id="certificatesGrid"
+      class="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
+    </div>
+  </div>
+</section>
+
+<!-- MODAL -->
+<div id="certModal"
+  class="fixed inset-0 hidden z-[999] bg-black/80 flex items-center justify-center p-4">
+
+  <!-- Close -->
+  <button onclick="closeCertModal()"
+    class="absolute top-4 right-4 w-10 h-10 rounded-full bg-white text-black text-2xl font-bold z-50">
+    ×
+  </button>
+
+  <!-- Prev -->
+  <button onclick="navigateCert(-1)"
+    class="absolute left-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full text-xl z-40">
+    ‹
+  </button>
+
+  <!-- Canvas -->
+  <canvas id="pdfCanvas"
+    class="max-w-full max-h-full bg-white rounded-lg shadow-xl"></canvas>
+
+  <!-- Next -->
+  <button onclick="navigateCert(1)"
+    class="absolute right-4 top-1/2 -translate-y-1/2 bg-white w-10 h-10 rounded-full text-xl z-40">
+    ›
+  </button>
+</div>
+
+<!-- PDF.js CDN -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+
+
+<script>
+pdfjsLib.GlobalWorkerOptions.workerSrc =
+  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+let certificates = [];
+let currentCertIndex = 0;
+let pdfDoc = null;
+
+const canvas = document.getElementById("pdfCanvas");
+const ctx = canvas.getContext("2d");
+
+// ================== LOAD CARDS ==================
+fetch("data/certificates.json")
+  .then(res => res.json())
+  .then(data => {
+    certificates = data;
+    const grid = document.getElementById("certificatesGrid");
+
+    data.forEach((cert, index) => {
+      const card = document.createElement("div");
+      card.className =
+        "group relative overflow-hidden rounded-xl border-2 border-black shadow-lg cursor-pointer bg-white";
+
+      // Card preview container
+      const preview = document.createElement("div");
+      preview.className = "relative h-64 overflow-hidden bg-gray-100";
+
+      const cardCanvas = document.createElement("canvas");
+      cardCanvas.className = "absolute inset-0 w-full h-full";
+      preview.appendChild(cardCanvas);
+      card.appendChild(preview);
+
+      // Mobile text
+      const mobileText = document.createElement("div");
+      mobileText.className = "p-4 md:hidden";
+      mobileText.innerHTML = `
+        <h3 class="font-bold">${cert.title}</h3>
+        <p class="text-sm text-gray-600">${cert.issuer} • ${cert.date}</p>`;
+      card.appendChild(mobileText);
+
+      // Desktop hover overlay
+      const overlay = document.createElement("div");
+      overlay.className =
+        "absolute inset-0 bg-white/95 opacity-0 md:group-hover:opacity-100 transition p-4 hidden md:flex flex-col justify-end";
+      overlay.innerHTML = `
+        <h3 class="font-bold">${cert.title}</h3>
+        <p class="text-sm text-gray-600">${cert.issuer} • ${cert.date}</p>`;
+      card.appendChild(overlay);
+
+      renderCardPDF(cert.image, cardCanvas, preview);
+      card.onclick = () => openCertModal(index);
+
+      grid.appendChild(card);
+    });
+  });
+
+// ================== CARD PDF RENDER ==================
+function renderCardPDF(url, canvas, container) {
+  pdfjsLib.getDocument(url).promise.then(pdf => {
+    pdf.getPage(1).then(page => {
+      const dpi = window.devicePixelRatio || 1;
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
+
+      const viewport = page.getViewport({ scale: 1 });
+      const scale = Math.max(
+        containerWidth / viewport.width,
+        containerHeight / viewport.height
+      );
+
+      const finalViewport = page.getViewport({ scale: scale * dpi });
+
+      canvas.width = finalViewport.width;
+      canvas.height = finalViewport.height;
+      canvas.style.width = `${finalViewport.width / dpi}px`;
+      canvas.style.height = `${finalViewport.height / dpi}px`;
+
+      page.render({
+        canvasContext: canvas.getContext("2d"),
+        viewport: finalViewport
+      });
+    });
+  });
+}
+
+// ================== MODAL ==================
+function openCertModal(index) {
+  currentCertIndex = index;
+  document.getElementById("certModal").classList.remove("hidden");
+  document.body.classList.add("overflow-hidden");
+  loadModalPDF(certificates[index].image);
+}
+
+function closeCertModal() {
+  document.getElementById("certModal").classList.add("hidden");
+  document.body.classList.remove("overflow-hidden");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function navigateCert(dir) {
+  currentCertIndex += dir;
+  if (currentCertIndex < 0) currentCertIndex = certificates.length - 1;
+  if (currentCertIndex >= certificates.length) currentCertIndex = 0;
+  loadModalPDF(certificates[currentCertIndex].image);
+}
+
+// ================== MODAL PDF RENDER (FIXED!) ==================
+async function loadModalPDF(url) {
+  pdfDoc = await pdfjsLib.getDocument(url).promise;
+  renderModalPage(1);
+}
+
+function renderModalPage(pageNum) {
+  pdfDoc.getPage(pageNum).then(page => {
+    const modal = document.getElementById("certModal");
+    const padding = 32;
+
+    const modalWidth = modal.clientWidth - padding;
+    const modalHeight = modal.clientHeight - padding;
+
+    const viewport = page.getViewport({ scale: 1 });
+
+    // 👇 THIS IS THE FIX
+    const scale = Math.min(
+      modalWidth / viewport.width,
+      modalHeight / viewport.height
+    );
+
+    const dpi = window.devicePixelRatio || 1;
+    const finalViewport = page.getViewport({ scale: scale * dpi });
+
+    canvas.width = finalViewport.width;
+    canvas.height = finalViewport.height;
+    canvas.style.width = `${finalViewport.width / dpi}px`;
+    canvas.style.height = `${finalViewport.height / dpi}px`;
+
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    page.render({
+      canvasContext: ctx,
+      viewport: finalViewport
+    });
+  });
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+</div>
+</div>  
+</div>  
+</div>
+</div>
+</div>
+
+<div class="flex py-10 w-7xl bg-white"></div>
+
+<footer aria-label="Site Footer" class="bg-black text-white">
+  <div class="mx-auto max-w-screen-xl px-4 pb-6 pt-16 sm:px-6 lg:px-8 lg:pt-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+      <div>
+        <div class="flex justify-center text-white sm:justify-start ">
+            <a href="./index.html">
+          <img src="assets/images/abswonb.svg" class="w-14" alt="" /></a>
+        </div>
+
+          <div class="flex justify-center text-white sm:justify-start ">
+          
+        <p
+          class="mt-6 max-w-md text-center leading-relaxed  text-white sm:max-w-xs sm:text-left"
+        > sighabh@gmail.com
+          
+        </p>
+        </div>
+
+
+<ul id="social" class="mt-8 flex justify-center gap-6 sm:justify-start md:gap-8">
+  <li>
+    <a href="./project.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Projects</span>
+      <img src="icons/project.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+    <li>
+    <a href="./certificate.html" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">Certificates</span>
+      <img src="icons/cert.svg" class="w-full h-full object-contain invert" alt="Projects"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://github.com/abhsheksingh" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">GitHub</span>
+      <img src="icons/github.svg" class="w-full h-full object-contain invert" alt="GitHub"/> 
+    </a>
+  </li>
+
+  <li>
+    <a href="https://www.linkedin.com/in/abhishek-singh-214a0a146/" rel="noreferrer" target="_blank" class="flex items-center justify-center w-10 h-10">
+      <span class="sr-only">LinkedIn</span>
+      <img src="icons/linkdns.svg" class="w-full h-full object-contain invert" alt="LinkedIn"/> 
+    </a>
+  </li>
+</ul>
+
+</div>
+
+      <div
+        class="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-2"
+      >
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100"></p>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-100 text-center"></p>
+
+        </div>
+
+        <div class="text-center sm:text-left">
+          <p class="text-lg font-medium text-gray-200"></p>
+
+          <ul class="mt-8 space-y-4 text-sm">
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li>
+              <a
+                class="flex items-center justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+                href="/"
+              >
+                <span class="flex-1 text-gray-200"></span>
+              </a>
+            </li>
+
+            <li
+              class="flex items-start justify-center gap-1.5 ltr:sm:justify-start rtl:sm:justify-end"
+            >
+              <address class="-mt-0.5 flex-1 not-italic text-gray-7200 font-bold">
+                United Kingdom
+               
+              </address>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-12 border-t border-gray-100 pt-6">
+      <div class="text-center sm:flex sm:justify-between sm:text-left">
+        <p class="text-sm text-gray-300">
+          <span class="block sm:inline"></span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+
+          <span>&middot;</span>
+
+          <a
+            class="inline-block text-teal-600 underline transition hover:text-teal-600/75"
+            href="/"
+          >
+            
+          </a>
+        </p>
+
+        <p class="mt-4 text-sm text-white sm:order-first sm:mt-0">
+           Abhishek Singh &copy; <script>document.write(new Date().getFullYear());</script>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<Script>
+  var button = document.querySelector('#toggle-menu-button');
+  var menu = document.querySelector('#toggle-menu');
+  var open = document.querySelector('#open');
+  var close = document.querySelector('#close');
+
+  button.addEventListener('click', (e)=>{
+    menu.classList.toggle('hidden');
+    open.classList.toggle('hidden');
+    close.classList.toggle('hidden');
+  });
+</Script>
+
+  </body>
+</html>

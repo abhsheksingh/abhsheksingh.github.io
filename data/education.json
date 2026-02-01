@@ -1,0 +1,52 @@
+
+[
+  {
+    "year": 2014,
+    "title": "B.Sc -  Life Sciences",
+    "detail": "Life Sciences – First Division",
+    "icon": "icons/bachelor.svg"
+  },
+    {
+    "year": 2014,
+    "title": "University of Delhi",
+    "icon": "icons/bachelor.svg"
+  },
+  {
+    "year": 2017,
+    "title": "M.Sc - Human Genetics",
+    "detail": "Human Genetics – First Class Distinction",
+    "icon": "icons/college.png"
+
+  },
+    {
+    "year": 2017,
+    "title": "Central University of Punjab",
+    "detail": "Human Genetics – First Class Distinction",
+    "icon": "icons/college.png"
+  },
+  {
+    "year": 2021,
+    "title": "Masters - Data Science & AI",
+    "detail": "Data Science & AI – First Class Distinction",
+    "icon": "icons/graduation.png"
+  },
+    {
+    "year": 2021,
+    "title": "University of Liverpool",
+    "detail": "Data Science & AI – First Class Distinction",
+    "icon": "icons/graduation.png"
+  },
+      {
+    "year": 2025,
+    "title": "Data Science Graduate Program",
+    "detail": "Data Science & AI – First Class Distinction",
+    "icon": "icons/graduation.png"
+  },
+  
+  {
+    "year": 2025,
+    "title": "Office for National Statistics",
+    "detail": "Data Science & AI – First Class Distinction",
+    "icon": "icons/graduation.png"
+  }
+]

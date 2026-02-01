@@ -1,0 +1,210 @@
+[
+  {
+    "id": "cert1",
+    "title": "Data Migration Learning Plan",
+    "thumbnail": "assets/pdf/awscf-thumbnail.jpg",
+    "image": "assets/pdf/awsdm.pdf",
+    "issuer": "AWS",
+    "date": "2022"
+  },
+  {
+    "id": "cert2",
+    "title": "Cloud Practioner Essentials",
+    "thumbnail": "assets/pdf/awscf-thumbnail.jpg",
+    "image": "assets/pdf/awscf.pdf",
+    "issuer": "AWS",
+    "date": "2022"
+  },
+  {
+    "id": "cert3",
+    "title": "Applied Data Science",
+    "thumbnail": "assets/pdf/awscf-thumbnail.jpg",
+    "image": "assets/pdf/Coursera BFWEAWE6F6HD.pdf",
+    "issuer": "AWS",
+    "date": "2020"
+  },
+  {
+    "id": "cert7",
+    "title": "R Data Cleaning",
+    "thumbnail": "assets/pdf/r-thumbnail.jpg",
+    "image": "assets/pdf/certificate_clean_r.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert8",
+    "title": "Correlation & Regression in R",
+    "thumbnail": "assets/pdf/r-thumbnail.jpg",
+    "image": "assets/pdf/certificate_corr_reg_r.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert9",
+    "title": "Exploratory Data Analysis",
+    "thumbnail": "assets/pdf/eda-thumbnail.jpg",
+    "image": "assets/pdf/certificate_EDA.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert10",
+    "title": "Intermediate R",
+    "thumbnail": "assets/pdf/r-thumbnail.jpg",
+    "image": "assets/pdf/certificate_inter_r.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert11",
+    "title": "Statistics in R",
+    "thumbnail": "assets/pdf/stats-thumbnail.jpg",
+    "image": "assets/pdf/certificate_stat.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert12",
+    "title": "Tidyverse in R",
+    "thumbnail": "assets/pdf/r-thumbnail.jpg",
+    "image": "assets/pdf/certificate_tidyverse.pdf",
+    "issuer": "R",
+    "date": "2020"
+  },
+  {
+    "id": "cert14",
+    "title": "Excel Essential Training",
+    "thumbnail": "assets/pdf/excel-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Excel Essential Training Office 365Microsoft 365.pdf",
+    "issuer": "Microsoft",
+    "date": "2021"
+  },
+  {
+    "id": "cert15",
+    "title": "Functional Programming with Python",
+    "thumbnail": "assets/pdf/python-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Functional Programming with Python.pdf",
+    "issuer": "Python",
+    "date": "2020"
+  },
+  {
+    "id": "cert16",
+    "title": "GDPR for Marketers",
+    "thumbnail": "assets/pdf/gdpr-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_GDPR for Marketers.pdf",
+    "issuer": "GDPR",
+    "date": "2021"
+  },
+  {
+    "id": "cert17",
+    "title": "Power BI Dashboards",
+    "thumbnail": "assets/pdf/powerbi-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Power BI Dashboards for Beginners.pdf",
+    "issuer": "Microsoft",
+    "date": "2020"
+  },
+  {
+    "id": "cert18",
+    "title": "Reinforcement Learning Foundations",
+    "thumbnail": "assets/pdf/ai-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Reinforcement Learning Foundations.pdf",
+    "issuer": "AI",
+    "date": "2021"
+  },
+  {
+    "id": "cert19",
+    "title": "Understand GDPR and Data Privacy",
+    "thumbnail": "assets/pdf/gdpr-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Understand GDPR and Data Privacy.pdf",
+    "issuer": "GDPR",
+    "date": "2021"
+  },
+  {
+    "id": "cert20",
+    "title": "Public Health Data Sources",
+    "thumbnail": "assets/pdf/health-thumbnail.jpg",
+    "image": "assets/pdf/CertificateOfCompletion_Using Public Health Data Sources (1).pdf",
+    "issuer": "Health",
+    "date": "2020"
+  },
+  {
+    "id": "cert21",
+    "title": "Cognitive Class DV0151EN",
+    "thumbnail": "assets/pdf/cognitive-thumbnail.jpg",
+    "image": "assets/pdf/Cognitive Class DV0151EN Certificate _ Cognitive Class.pdf",
+    "issuer": "IBM",
+    "date": "2020"
+  },
+  {
+    "id": "cert22",
+    "title": "Cognitive Class DA0101EN",
+    "thumbnail": "assets/pdf/cognitive-thumbnail.jpg",
+    "image": "assets/pdf/CognitiveClass DA0101EN Certificate _ Cognitive Class.pdf",
+    "issuer": "IBM",
+    "date": "2020"
+  },
+  {
+    "id": "cert23",
+    "title": "Cognitive Class DS0105EN",
+    "thumbnail": "assets/pdf/cognitive-thumbnail.jpg",
+    "image": "assets/pdf/CognitiveClass DS0105EN Certificate _ Cognitive Class.pdf",
+    "issuer": "IBM",
+    "date": "2020"
+  },
+  {
+    "id": "cert24",
+    "title": "Coursera Certificate",
+    "thumbnail": "assets/pdf/coursera-thumbnail.jpg",
+    "image": "assets/pdf/Coursera 7D2L7F69PJNU.pdf",
+    "issuer": "Coursera",
+    "date": "2020"
+  },
+  {
+    "id": "cert25",
+    "title": "Coursera Certificate",
+    "thumbnail": "assets/pdf/coursera-thumbnail.jpg",
+    "image": "assets/pdf/Coursera 8FECG5TQ67QR.pdf",
+    "issuer": "Coursera",
+    "date": "2020"
+  },
+  {
+    "id": "cert26",
+    "title": "Coursera Certificate",
+    "thumbnail": "assets/pdf/coursera-thumbnail.jpg",
+    "image": "assets/pdf/Coursera B2RPNHH5AN4Z.pdf",
+    "issuer": "Coursera",
+    "date": "2020"
+  },
+  {
+    "id": "cert28",
+    "title": "Coursera Certificate",
+    "thumbnail": "assets/pdf/coursera-thumbnail.jpg",
+    "image": "assets/pdf/Coursera L9YP7Y9DN3RM.pdf",
+    "issuer": "Coursera",
+    "date": "2020"
+  },
+  {
+    "id": "cert29",
+    "title": "Coursera Certificate",
+    "thumbnail": "assets/pdf/coursera-thumbnail.jpg",
+    "image": "assets/pdf/Coursera SABWN423SF7P.pdf",
+    "issuer": "Coursera",
+    "date": "2020"
+  },
+  {
+    "id": "cert30",
+    "title": "Data Science Hands-on",
+    "thumbnail": "assets/pdf/ds-thumbnail.jpg",
+    "image": "assets/pdf/Ds-handson.pdf",
+    "issuer": "Data Science",
+    "date": "2020"
+  },
+  {
+    "id": "cert31",
+    "title": "IBM DS0103EN",
+    "thumbnail": "assets/pdf/ibm-thumbnail.jpg",
+    "image": "assets/pdf/IBM DS0103EN Certificate _ Cognitive Class.pdf",
+    "issuer": "IBM",
+    "date": "2020"
+  }
+]
