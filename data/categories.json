@@ -3,6 +3,8 @@
     "category": "Programming",
     "technologies": [
       { "name": "PySpark", "icon": "icons/spark.svg", "link": "https://www.r-project.org/" },
+
+      { "name": "SQL", "icon": "icons/sql.svg", "link": "https://www.php.net/" },
       { "name": "Python", "icon": "icons/python.svg", "link": "https://www.python.org/",
           "children":[
               { "name": "Flask", "icon": "icons/flask.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
@@ -11,7 +13,6 @@
               { "name": "Django", "icon": "icons/django.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" }
           ]
   },
-      { "name": "SQL", "icon": "icons/sql.svg", "link": "https://www.php.net/" },
       { "name": "JavaScript", "icon": "icons/javascript.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/JavaScript" },
       { "name": "HTML | CSS", "icon": "icons/html.svg", "link": "https://developer.mozilla.org/en-US/docs/Web/HTML" }
     ]
