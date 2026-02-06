@@ -354,7 +354,9 @@ function setActiveButton(categoryName){
 }
 
 /* ======================================================
-   ONLY CHANGE IS HERE: smooth transitions added
+   improved: avoid label overlap with icons, ensure label
+   background sits above links but doesn't cover node icons,
+   and svg allows visible overflow so rect borders aren't clipped
    ====================================================== */
 function drawTree(categoryName){
   currentCategory = categoryName;
@@ -362,9 +364,10 @@ function drawTree(categoryName){
 
   const container = document.querySelector('#tech-graph-container');
   const width = container.clientWidth;
-  const height = container.clientHeight; // ✅ unchanged
+  const height = container.clientHeight;
 
-  const svg = d3.select("svg");
+  const svg = d3.select("svg")
+    .attr("overflow", "visible"); // allow rect borders to render outside clipped area
   svg.selectAll("*").remove();
 
   /* fade + slight slide (visual only) */
@@ -388,7 +391,11 @@ function drawTree(categoryName){
   const nodeRadius = width < 640 ? 20 : 30;
   const iconSize = width < 640 ? 20 : 30;
   const labelFont = width < 640 ? "10px" : "12px";
-  const labelOffset = width < 640 ? nodeRadius + 12 : nodeRadius + 15;
+
+  // increase label padding and push label down a bit so rect doesn't touch the circle
+  const padX = 8;
+  const padY = 6;
+  const labelOffset = width < 640 ? nodeRadius + padY + 12 : nodeRadius + padY + 15;
 
   /* animated links */
   const links = g.selectAll(".link")
@@ -432,11 +439,31 @@ function drawTree(categoryName){
     .attr("d",hexagon(50))
     .attr("class","hexagon");
 
+  // root label with white background rect + border and raised above links
   node.filter(d=>d.depth===0)
     .append("text")
     .attr("text-anchor","middle")
     .attr("dy",5)
-    .text(d=>d.data.name);
+    .style("font-size", labelFont)
+    .style("font-weight", d => (d.children && d.children.length > 1) ? "700" : "400")
+    .text(d=>d.data.name)
+    .each(function(){
+      const txt = d3.select(this);
+      const bbox = this.getBBox();
+      // insert rect BEFORE the hexagon/path so hexagon remains visually on top (no accidental cover)
+      d3.select(this.parentNode)
+        .insert("rect", "path")
+        .attr("x", bbox.x - padX)
+        .attr("y", bbox.y - padY)
+        .attr("width", bbox.width + padX * 2)
+        .attr("height", bbox.height + padY * 2)
+        .attr("fill", "#ffffff")
+        .attr("stroke", "#d1d5db")
+        .attr("stroke-width", 1)
+        .attr("rx", 4)
+        .attr("pointer-events", "none");
+      txt.raise();
+    });
 
   /* child nodes */
   const nodeGroup = node.filter(d=>d.depth>0)
@@ -472,11 +499,32 @@ function drawTree(categoryName){
         .attr("stroke","#ccc");
     });
 
+  // child label with white background rect + border and raised above links
   nodeGroup.append("text")
     .attr("dy",labelOffset)
     .attr("text-anchor","middle")
     .style("font-size",labelFont)
-    .text(d=>d.data.name);
+    .style("font-weight", d => (d.children && d.children.length > 1) ? "700" : "400")
+    .text(d=>d.data.name)
+    .each(function(){
+      const txt = d3.select(this);
+      const bbox = this.getBBox();
+
+      // insert rect BEFORE the circle so the circle renders on top of the rect (rect won't cover icon)
+      d3.select(this.parentNode)
+        .insert("rect", "circle")
+        .attr("x", bbox.x - padX)
+        .attr("y", bbox.y - padY)
+        .attr("width", bbox.width + padX * 2)
+        .attr("height", bbox.height + padY * 2)
+        .attr("fill", "#ffffff")
+        .attr("stroke", "#d1d5db")
+        .attr("stroke-width", 1)
+        .attr("rx", 6)
+        .attr("pointer-events", "none");
+      // make sure text is top-most
+      txt.raise();
+    });
 }
 
 /* load categories */
@@ -499,47 +547,47 @@ fetch("data/categories.json")
     window.addEventListener("resize", ()=>drawTree(currentCategory));
   });
 
-    // === Education Timeline ===
-    fetch("data/education.json")
-      .then(res => res.json())
-      .then(eduMilestones => {
-        const chart = milestones('#education-timeline')
-          .mapping({ timestamp: 'year', text: 'title' })
-          .parseTime('%Y')
-          .aggregateBy('year')
-          .orientation('horizontal')
-          .distribution('top-bottom')
-          .autoResize(true)
-          .optimize(true)
-          .render(eduMilestones);
+// === Education Timeline ===
+fetch("data/education.json")
+  .then(res => res.json())
+  .then(eduMilestones => {
+    const chart = milestones('#education-timeline')
+      .mapping({ timestamp: 'year', text: 'title' })
+      .parseTime('%Y')
+      .aggregateBy('year')
+      .orientation('horizontal')
+      .distribution('top-bottom')
+      .autoResize(true)
+      .optimize(true)
+      .render(eduMilestones);
 
-        chart.svg.selectAll('.milestones-item text').each(function(d, i){
-          const el = d3.select(this);
-          el.text("");
+    chart.svg.selectAll('.milestones-item text').each(function(d, i){
+      const el = d3.select(this);
+      el.text("");
 
-          el.append('tspan')
-            .attr('class','milestone-title')
-            .attr('x', 0)
-            .attr('dy', 0)
-            .text(eduMilestones[i].title);
+      el.append('tspan')
+        .attr('class','milestone-title')
+        .attr('x', 0)
+        .attr('dy', 0)
+        .text(eduMilestones[i].title);
 
-          el.append('tspan')
-            .attr('class','milestone-detail')
-            .attr('x', 0)
-            .attr('dy', '1.2em')
-            .text(eduMilestones[i].detail);
+      el.append('tspan')
+        .attr('class','milestone-detail')
+        .attr('x', 0)
+        .attr('dy', '1.2em')
+        .text(eduMilestones[i].detail);
 
-          if (eduMilestones[i].icon) {
-            chart.svg.append("image")
-              .attr("xlink:href", eduMilestones[i].icon)
-              .attr("width", 24)
-              .attr("height", 24)
-              .attr("x", d.x ? d.x - 12 : 0)
-              .attr("y", d.y ? d.y - 40 : 0);
-          }
-        });
-      });
-  </script>
+      if (eduMilestones[i].icon) {
+        chart.svg.append("image")
+          .attr("xlink:href", eduMilestones[i].icon)
+          .attr("width", 24)
+          .attr("height", 24)
+          .attr("x", d.x ? d.x - 12 : 0)
+          .attr("y", d.y ? d.y - 40 : 0);
+      }
+    });
+  });
+</script>
 <!--  TECK STACK BLOCK-->
 
 
