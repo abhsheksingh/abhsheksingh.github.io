@@ -357,6 +357,9 @@ function setActiveButton(categoryName){
    improved: avoid label overlap with icons, ensure label
    background sits above links but doesn't cover node icons,
    and svg allows visible overflow so rect borders aren't clipped
+   Minimal changes:
+    - target tech SVG only (avoid affecting education SVG)
+    - remove stroke on label rects so text boxes have no borders
    ====================================================== */
 function drawTree(categoryName){
   currentCategory = categoryName;
@@ -366,7 +369,8 @@ function drawTree(categoryName){
   const width = container.clientWidth;
   const height = container.clientHeight;
 
-  const svg = d3.select("svg")
+  // target the SVG inside tech-graph-container only
+  const svg = d3.select("#tech-graph-container svg")
     .attr("overflow", "visible"); // allow rect borders to render outside clipped area
   svg.selectAll("*").remove();
 
@@ -382,6 +386,7 @@ function drawTree(categoryName){
     .attr("transform", "translate(0,50)");
 
   const category = categories.find(c => c.category === categoryName);
+  if (!category) return;
   const data = { name: category.category, children: category.technologies };
   const root = d3.hierarchy(data);
 
@@ -439,7 +444,7 @@ function drawTree(categoryName){
     .attr("d",hexagon(50))
     .attr("class","hexagon");
 
-  // root label with white background rect + border and raised above links
+  // root label with white background rect (no border) and raised above links
   node.filter(d=>d.depth===0)
     .append("text")
     .attr("text-anchor","middle")
@@ -458,8 +463,8 @@ function drawTree(categoryName){
         .attr("width", bbox.width + padX * 2)
         .attr("height", bbox.height + padY * 2)
         .attr("fill", "#ffffff")
-        .attr("stroke", "#d1d5db")
-        .attr("stroke-width", 1)
+        .attr("stroke", "none")       // removed rectangular border
+        .attr("stroke-width", 0)
         .attr("rx", 4)
         .attr("pointer-events", "none");
       txt.raise();
@@ -499,7 +504,7 @@ function drawTree(categoryName){
         .attr("stroke","#ccc");
     });
 
-  // child label with white background rect + border and raised above links
+  // child label with white background rect (no border) and raised above links
   nodeGroup.append("text")
     .attr("dy",labelOffset)
     .attr("text-anchor","middle")
@@ -518,8 +523,8 @@ function drawTree(categoryName){
         .attr("width", bbox.width + padX * 2)
         .attr("height", bbox.height + padY * 2)
         .attr("fill", "#ffffff")
-        .attr("stroke", "none")
-        .attr("stroke-width", 1)
+        .attr("stroke", "none")       // removed rectangular border
+        .attr("stroke-width", 0)
         .attr("rx", 6)
         .attr("pointer-events", "none");
       // make sure text is top-most
@@ -543,7 +548,10 @@ fetch("data/categories.json")
       buttonContainer.appendChild(btn);
     });
 
-    drawTree(categories[0].category);
+    if (categories.length) {
+      drawTree(categories[0].category);
+      currentCategory = categories[0].category;
+    }
     window.addEventListener("resize", ()=>drawTree(currentCategory));
   });
 
@@ -561,6 +569,12 @@ fetch("data/education.json")
       .optimize(true)
       .render(eduMilestones);
 
+    // minimal responsive fix: compute font sizes from container width and apply to tspans
+    const eduContainer = document.querySelector('#education-timeline');
+    const eduWidth = eduContainer ? eduContainer.clientWidth : 800;
+    const titleSize = eduWidth < 640 ? '12px' : eduWidth < 1024 ? '14px' : '16px';
+    const detailSize = eduWidth < 640 ? '10px' : eduWidth < 1024 ? '12px' : '13px';
+
     chart.svg.selectAll('.milestones-item text').each(function(d, i){
       const el = d3.select(this);
       el.text("");
@@ -569,12 +583,14 @@ fetch("data/education.json")
         .attr('class','milestone-title')
         .attr('x', 0)
         .attr('dy', 0)
+        .style('font-size', titleSize)
         .text(eduMilestones[i].title);
 
       el.append('tspan')
         .attr('class','milestone-detail')
         .attr('x', 0)
         .attr('dy', '1.2em')
+        .style('font-size', detailSize)
         .text(eduMilestones[i].detail);
 
       if (eduMilestones[i].icon) {
@@ -585,6 +601,15 @@ fetch("data/education.json")
           .attr("x", d.x ? d.x - 12 : 0)
           .attr("y", d.y ? d.y - 40 : 0);
       }
+    });
+
+    // keep timeline responsive on resize
+    window.addEventListener('resize', () => {
+      const w = eduContainer ? eduContainer.clientWidth : 800;
+      const newTitle = w < 640 ? '12px' : w < 1024 ? '14px' : '16px';
+      const newDetail = w < 640 ? '10px' : w < 1024 ? '12px' : '13px';
+      chart.svg.selectAll('.milestones-item .milestone-title').style('font-size', newTitle);
+      chart.svg.selectAll('.milestones-item .milestone-detail').style('font-size', newDetail);
     });
   });
 </script>
